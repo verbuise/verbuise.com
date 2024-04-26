@@ -1,0 +1,17 @@
+{
+  "en": {
+    "greeting": "Welcome!",
+    "login_button": "Login",
+    "signup_button": "Sign Up"
+  },
+  "es": {
+    "greeting": "¡Bienvenido!",
+    "login_button": "Iniciar sesión",
+    "signup_button": "Registrarse"
+  },
+  "fr": {
+    "greeting": "Bienvenue!",
+    "login_button": "Connexion",
+    "signup_button": "S'inscrire"
+  }
+}
