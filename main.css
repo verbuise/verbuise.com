@@ -1,0 +1,259 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    zoom: 1.2;
+    -moz-transform: scale(1.2);
+    -moz-transform-origin: 0 0;
+    /* fix for Chrome */
+}
+
+* {
+    transition: 250ms;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin: 0;
+    background-color: #e5e5f7;
+    opacity: 0.95;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+h1 {
+    font-family: "muli", sans-serif;
+}
+
+hr {
+    margin: 6px 8px;
+    border-color: rgba(240, 240, 240, 0.3);
+}
+
+.inter {
+    font-family: Inter, sans-serif;
+
+    font-variant-ligatures: contextual;
+    -moz-font-feature-settings: "calt";
+    -webkit-font-feature-settings: "calt";
+    font-feature-settings: "calt";
+}
+
+nav ul,
+nav ul * {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    z-index: 200;
+}
+
+nav ul {
+    display: block;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin-top: 7.5px;
+    margin-left: 20px;
+    border-bottom: 3px solid black;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid white;
+    transition: 200ms;
+}
+
+nav ul h1 {
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    border-bottom: 4px solid black;
+    transition: 200ms;
+}
+
+nav ul h1:hover {
+    border-bottom: 4px solid white;
+    transition: 200ms;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul:hover {
+    display: block;
+}
+
+nav ul li ul {
+    display: block;
+    position: absolute;
+    display: none;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+nav ul li ul li {
+    display: block;
+    padding: 10px 5px;
+    background-color: black;
+}
+
+nav ul li ul li h2 {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 3px solid black;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+#main {
+    padding: 3vw;
+    padding-top: 10vh;
+    height: 100vh;
+    color: rgb(0, 57, 45);
+    max-width: 800px;
+    margin: auto
+}
+
+#main h1 {
+    font-weight: bold;
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.caption {
+    font-weight: normal;
+    font-size: medium;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background: rgba(201, 255, 244, 0.764);
+    color: rgb(0, 67, 54);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#main a {
+    margin: 0 10px;
+    background: transparent;
+    padding: 5px 20px;
+    border: 2px solid rgb(0, 164, 132);
+    border-radius: 7px;
+    font-size: small;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+    transition: 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2.5px 15px rgb(0, 164, 132);
+}
+
+#main a.primary {
+    background: rgb(0, 134, 107);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#main a.secondary {
+    background: rgba(201, 255, 244, 0.643);
+    color: rgb(0, 134, 107);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#main a:hover {
+    border: 2px solid rgb(0, 134, 107);
+}
+
+#globe {
+    position: absolute;
+    left: -20px;
+    top: 30%;
+    z-index: -1;
+    width: auto;
+    max-width: calc(100vw + 20px);
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 300px;
+    position: relative;
+}
+
+.row {
+    border-radius: 7px;
+    padding: 0;
+    background-color: #e5e5f7;
+    opacity: 0.95;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+    margin-bottom: 30px !important;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px;
+    width: 90%;
+    height: 300px !important;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.column .content h2 {
+    font-weight: 900;
+    font-size: xx-large;
+    background-color: transparent;
+    margin: 0;
+    color: rgb(0, 79, 32);
+}
+
+#features {
+    position: absolute;
+    top: 100vh;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 700px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+}

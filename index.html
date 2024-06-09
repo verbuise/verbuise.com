@@ -1,618 +1,174 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-<style>
-	body {
-		background: #FFF7D0;
-		color: black;
-	}
+<!DOCTYPE html>
+<html lang="en">
 
-	navbar {
-		width: 100%;
-		height: 67px;
-		background: transparent;
-		z-index: 100000;
-		padding: 10px;
-		border-bottom: 4px solid rgb(40, 41, 57);
-		position: fixed;
-		margin: 0;
-		font-family: 'Poppins', sans-serif;
-		font-weight: 900;
-	}
-
-	navbar .title {
-		margin: 0;
-		float: left;
-	}
-
-	navbar .title a {
-		text-decoration: none;
-		padding: 0 12px;
-		color: rgb(40, 41, 57);
-	}
-
-	navbar .title a:hover {
-		text-decoration: none;
-		font-style: italic;
-	}
-
-	navbar .action {
-		float: right;
-		color: rgb(40, 41, 57);
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		padding-top: 10px;
-	}
-
-	navbar .action a {
-		text-decoration: none;
-		color: rgb(40, 41, 57);
-		border-bottom: 3px solid rgb(40, 41, 57);
-		margin-right: 14px;
-	}
-
-	navbar .action a:hover {
-		font-style: italic;
-	}
-
-	content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-	}
-
-	content.banner {
-		display: block;
-		height: auto;
-		background: blue;
-		width: 100vw;
-	}
-
-	.banner .subheader {
-		font-weight: 700;
-		font-size: 40px;
-		color: white;
-	}
-
-	.banner .actiongroup {
-		border: none
-	}
-
-	content.blue {
-		background: #FFF7D0
-	}
-
-	content.black {
-		background: rgb(40, 41, 57);
-	}
-
-	content .header {
-		padding: 0 20px;
-		color: black;
-		font-weight: 900;
-		text-align: left;
-		font-family: 'Poppins', sans-serif;
-		font-size: 60px;
-	}
-
-	content .subheader {
-		padding: 0 20px;
-		color: black;
-		font-weight: 400;
-		text-align: left;
-		font-family: 'Poppins', sans-serif;
-		font-size: 30px;
-	}
-
-	content .actionheader {
-		margin-top: 15px;
-		padding: 10px 20px;
-	}
-
-	.button {
-		padding: 5px 20px;
-		font-family: 'Poppins', sans-serif;
-		text-decoration: none;
-		margin-right: 4px;
-		display: inline-block
-	}
-
-	.button.secondary {
-		padding: 10px 20px;
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		background: blue;
-		color: white;
-		border: 3px solid blue;
-	}
-
-	.button.main {
-		padding: 10px 20px;
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		background: rgb(0, 255, 179);
-		color: black;
-		border: 3px solid rgb(0, 255, 179);
-	}
-
-	.button.main:hover {
-		background: white;
-		color: black;
-		border-color: white;
-	}
-
-	.button.tertiary {
-		padding: 10px 20px;
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		background: transparent;
-		color: black;
-		border: 3px solid black;
-	}
-
-	.button.quaternary {
-		padding: 10px 20px;
-		font-family: 'Poppins', sans-serif;
-		font-weight: 700;
-		background: transparent;
-		color: white;
-		border: 3px solid white;
-	}
-
-	.button.tertiary:hover {
-		background: black;
-		color: white;
-	}
-
-	.button.quaternary:hover {
-		background: white;
-		color: black;
-	}
-
-	.button.secondary:hover {
-		background: white;
-		color: black;
-		border-color: white;
-	}
-
-	underline.left {
-		position: relative;
-	}
-
-	underline.left:before {
-		content: "";
-		position: absolute;
-		width: 0;
-		height: 6px;
-		bottom: 0;
-		left: 0;
-		background-color: #000;
-		visibility: hidden;
-		transition: all 0.3s ease-in-out;
-	}
-
-	underline.left:hover:before {
-		visibility: visible;
-		width: 100%;
-	}
-
-	table {
-		color: white;
-		width: 100%;
-		text-align: left;
-		font-family: 'Poppins', sans-serif;
-		border: 3px solid white;
-		padding: 20px 25px;
-	}
-
-	th {
-		font-weight: 700;
-		font-size: 20px;
-	}
-
-	td {
-		font-weight: 400;
-		font-size: 15px;
-	}
-
-	.informationheader {
-		font-size: 25px;
-		color: white;
-		font-weight: 700;
-		font-family: 'Poppins', sans-serif;
-	}
-
-	.informationpara {
-		font-size: 15px;
-		color: white;
-		font-weight: 400;
-		font-family: 'Poppins', sans-serif;
-	}
-
-	.actiongroup {
-		padding: 20px;
-		padding-top: 20px;
-		border: 4px solid white;
-		background: transparent;
-		color: white;
-		max-width: 900px;
-	}
-
-	.learnmore {
-		color: blue;
-		font-weight: 400;
-		text-decoration: none;
-	}
-
-	.discount {
-		background: red;
-		color: white;
-		padding: 2px;
-		font-size: 14px;
-		border-radius: 5px;
-		font-weight: 700;
-		display: inline-block
-	}
-
-	table {
-		color: black;
-		border-collapse: collapse;
-		background: white;
-	}
-
-	td:first-child {
-		text-align: right;
-		font-weight: 600;
-		padding-right: 15px;
-	}
-
-	td {
-		text-align: center;
-		padding: 8px;
-	}
-
-	th {
-		text-align: center;
-		padding: 20px 20px;
-	}
-
-	tr:last-child {
-		text-align: center;
-	}
-
-	.right-30 {
-		display: none
-	}
-
-	.left-70 {
-		max-width: 900px;
-		margin: auto;
-	}
-
-	.left-30 {
-		display: none
-	}
-
-	.right-70 {
-		max-width: 900px;
-		margin: auto;
-	}
-
-	@media (min-width: 1130px) {
-		.left-70 {
-			width: 70vw;
-			float: left;
-		}
-
-		.right-30 {
-			width: 29vw;
-			float: right;
-			display: block
-		}
-
-		.left-30 {
-			width: 29vw;
-			float: left;
-			display: block
-		}
-
-		.right-70 {
-			width: 70vw;
-			float: right;
-		}
-
-		.show-medium {
-			display: none;
-		}
-	}
-
-	.show-small {
-		display: none;
-	}
-
-	@media (max-width: 660px) {
-
-		.show-medium {
-			display: none;
-		}
-
-		.show-small {
-			display: block;
-		}
-	}
-
-	h3.subheader {
-		font-size: 25px
-	}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbuise | your AI powered content localization platform</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kfq4nzn.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
 
 <body>
-	<navbar>
-		<h1 class="title"><a href="/">Verbuise</a></h1>
-		<span class="action">
-			<a href="#solutions">Solutions</a>
-			<a href="#pricing">Pricing</a>
-			<a href="https://app.verbuise.com/signup">Signup</a>
-		</span>
-	</navbar>
-	<content class="blue">
-		<div class="left-70">
-			<h1 class="header">
-				<underline class="left" title="A dictionary of translations">Verbuise</underline>
-				<!--<i>[ˈvɝˈbaɪz] [vUHR-bIEz]</i>-->
-			</h1>
-			<h3 class="subheader">
-				Making digital localization easy for you and seamless for your users.<br>
-			</h3>
-			<div class="actionheader">
-				<a class="button main" href="#solutions">Solutions.</a>
-				<a class="button secondary" href="https://app.verbuise.com/signup">Signup.</a><br><br>
-				<a class="button tertiary" href="https://app.verbuise.com/open-source">Always free for students and open source.</a>
-			</div>
-			<!-- Begin Mailchimp Signup Form -->
-<div id="mc_embed_signup">
-    <form action="https://verbuise.us12.list-manage.com/subscribe/post?u=ef79006bcf58312ea7b06d9fc&amp;id=d196204842&amp;f_id=000742e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
-        <div id="mc_embed_signup_scroll">
-        <h2>Subscribe</h2>
-        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
-</label>
-	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
-	<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
-</div>
-<div class="mc-field-group size1of2">
-	<label for="mce-PHONE">Phone Number </label>
-	<input type="text" name="PHONE" class="" value="" id="mce-PHONE">
-	<span id="mce-PHONE-HELPERTEXT" class="helper_text"></span>
-</div>
-	<div id="mce-responses" class="clear foot">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef79006bcf58312ea7b06d9fc_d196204842" tabindex="-1" value=""></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                <p class="brandingLogo"><a href="http://eepurl.com/idOdcf" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_light_dtp.svg"></a></p>
+    <nav>
+        <div>
+            <a class="logo" href="/">
+                <h1>Verbuise</h1>
+            </a>
+
+            <span class="three_lines">
+                <button class="button-link"
+                    onclick="document.getElementById('nav_interactive').style.display = 'block'; document.body.style.overflow = 'hidden'">
+                    <span class="toggle_bar"></span>
+                    <span class="toggle_bar"></span>
+                    <span class="toggle_bar"></span>
+                </button>
+            </span>
+            <span style="float: right;margin-right: 10px;margin-top: 5px;" class="nav_interactive" id="nav_interactive">
+                <span class="three_lines_popup">
+                    <button class="button-link"
+                        onclick="document.getElementById('nav_interactive').style.display = 'none'; document.body.style.overflow = 'inherit'">
+                        ✕
+                    </button>
+                </span>
+                <div class="dropdown">
+                    <a class="dropdown_link  navigation" href="/pricing">
+                        <span class="inter">
+                            Pricing
+                        </span>
+                    </a>
+
+                    <a class="dropdown_small  navigation" href="/pricing">
+                        <span class="inter">
+                            Pricing
+                        </span>
+                    </a>
+                </div>
+                <div class="dropdown">
+                    <a class="navigation dropdown_click" href="javascript:dropdown('orgDropdown')">
+                        <span class="inter">
+                            Products <span class="up">⌄</span>
+                        </span>
+                    </a>
+                    <a class="navigation dropdown_small">
+                        <span class="inter">Products</span>
+                    </a>
+                    <div id="orgDropdown" class="dropdown-content right">
+                        <a href="/new/project">AI translation</a>
+                        <a href="/new/snippet">Text localization</a>
+                        <a href="/new/integration">Image localization</a>
+                        <a href="/new/organization">Currency conversion</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="navigation dropdown_click" href="javascript:dropdown('alertDropdown')">
+                        <span class="inter">
+                            Developers
+                            <span class="up">⌄</span>
+                        </span>
+                    </a>
+                    <a class="navigation dropdown_small">
+                        <span class="inter">Developers</span>
+                    </a>
+                    <div id="alertDropdown" class="dropdown-content right">
+                        <a href="https://developer.verbuise.com/">Developer site</a>
+                        <a href="https://developer.verbuise.com/ref/api">API reference</a>
+                        <hr>
+                        <a href="https://developer.verbuise.com/ref/sdk/swift">Swift SDK</a>
+                        <a href="https://developer.verbuise.com/ref/sdk/web">Web SDK</a>
+                        <a href="https://developer.verbuise.com/ref/sdk">Other SDKs</a>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+    <div id="main">
+        <h1>Revolutionize Your Global Reach with AI-Powered Localization</h1>
+        <h2 class="caption">Seamlessly adapt any content for any audience, anywhere. Currency conversions, text
+            localization, and
+            regional images.
+        </h2>
+        <a class="primary" href="https://app.verbuise.com/?onboard=true&trial=true">Get Started for Free</a>
+        <a class="secondary">Watch Demo</a>
+
+        <div id="features">
+            <div class="row">
+                <div class="column">
+                    <div class="content">
+                        <h2>🌎 Instant Translations</h2>
+                        <p>Translate your website, app, or product content instantly into over 100 languages.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <img
+                        src="https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <img
+                        src="https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <h2>Instant Translations</h2>
+                        <p>Translate your website, app, or product content instantly into over 100 languages.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</form>
-</div>
+    <div id="globe"></div>
 
-<!--End mc_embed_signup-->
-		</div>
-		<div class="right-30">
-			<img src="/image/2.svg" style="width:400px;right:10%;">
-		</div>
-	</content>
-	<content class="banner" style="padding: 20px 0;">
-		<div class="show-medium" style="position:absolute;right:10%;bottom:5%;width:200px;transform:rotate(10deg)">
-			<img src="/image/2.svg" style="">
-		</div>
-		<div class="show-small">
-			<img src="/image/2.svg" style="width:49vw;display:inline">
-			<img src="/image/3.svg" style="width:49vw;float:right;">
-		</div>
-	</content>
-	<content class="black" id="solutions">
-		<div class="left-70">
-			<h1 class="header" style="color:white">
-				Solutions
-			</h1>
-			<div class="actionheader">
-				<div class="actiongroup">
-					<h3 class="informationheader">
-						Language Translations
-					</h3>
-					<p class="informationpara">Easily add and instantaneously update language translations to your product, website, or app using our software. <a href="/solutions/language" class="learnmore">Learn more</a>.</p>
-					<br>
-					<h3 class="informationheader">
-						Live Currency Conversions
-					</h3>
-					<p class="informationpara">Selling outside your home country? Make sure your prices are upto date with live exchange rates. <a href="/solutions/currency" class="learnmore">Learn more</a>.</p>
-					<br>
-					<h3 class="informationheader">
-						Single Use Data
-					</h3>
-					<p class="informationpara">Need to generate single use data like coupons codes on demand? We've got your back, we'll generate and store the data and you can verify it with our advanced API. <a href="/solutions/single-use"
-						 class="learnmore">Learn
-							more</a>.</p>
-				</div>
-			</div>
-			<div class="actionheader">
-				<a class="button main" href="https://app.verbuise.com/signup">Signup now.</a>
-				<a class="button secondary" href="#pricing">Pricing.</a>
-				<a class="button quaternary" href="https://app.verbuise.com/open-source">Always free for students and open source.</a>
-			</div>
-		</div>
-		<div class="right-30">
-			<img src="/image/3.svg" style="width:400px;right:10%;">
-		</div>
-	</content>
-	<content class="banner">
-		<div class="actiongroup">
-			<br>
-			<h3 class="subheader">Everything is always free for students and open source projects.</h3>
+    <script src="//unpkg.com/globe.gl"></script>
 
-			<a class="button quaternary" href="https://app.verbuise.com/open-source" style="margin-left: 20px;margin-top:20px">Fill out the form.</a>
-			<br><br>
-		</div>
-	</content>
-	<content class="white" id="pricing">
-		<div>
-			<h1 class="header">
-				<underline class="left">Pricing Plans</underline>
-			</h1>
-			<div class="actionheader">
-				<div class="actiongroup" style="background: white">
-					<table>
-						<colgroup>
-							<col span="1" style="border: 2px solid black" />
-							<col span="1" style="background-color:#FFF7D0" />
-							<col span="1" style="background-color:blue" />
-							<col span="1" style="background-color:rgb(0, 255, 179)" />
-						</colgroup>
-						<thead>
-							<tr>
-								<th style="text-align: right">Plans</th>
-								<th style="color:black;padding: 0 45px;">Personal</th>
-								<th style="color:white;padding: 0 30px;">Basic <span class="discount">20% OFF!</span></th>
-								<th>Enterprise <span class="discount">60% OFF!</span></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Price</td>
-								<td style="color:black;border: blue;text-align:center">$7/month</td>
-								<td style="color:white;border: blue;text-align:center">$56/month</td>
-								<td>$400/month</td>
-							</tr>
-							<tr>
-								<td>Translated Strings</td>
-								<td style="color:black">500</td>
-								<td style="color:white;border: blue;text-align:center">2,000</td>
-								<td>10,000</td>
-							</tr>
-							<tr>
-								<td>Translation Requests</td>
-								<td style="color:black">10,000</td>
-								<td style="color:white;border: blue;text-align:center">100,000</td>
-								<td>1,000,000</td>
-							</tr>
-							<tr>
-								<td>Live Currency Conversions</td>
-								<td style="color:black">&times;</td>
-								<td style="color:white;border: blue;text-align:center">&times;</td>
-								<td>500,000</td>
-							</tr>
-							<tr>
-								<td>Single Use Data Generations</td>
-								<td style="color:black">&times;</td>
-								<td style="color:white;border: blue;text-align:center">100,000</td>
-								<td>1,000,000</td>
-							</tr>
-							<tr>
-								<td>Single Use Data Validations</td>
-								<td style="color:black">&times;</td>
-								<td style="color:white;border: blue;text-align:center">200,000</td>
-								<td>2,000,000</td>
-							</tr>
-							<tr>
-								<td style="color:white;border: blue;text-align:center"><br><a class="button tertiary" href="https://app.verbuise.com/open-source">Student or FOSS?</a><br><br></td>
-								<td style="color:black;border: blue;text-align:center"><br><a class="button tertiary" href="https://app.verbuise.com/signup?type=personal">Signup now.</a><br><br></td>
-								<td style="color:white;border: blue;text-align:center"><br><a class="button main" href="https://app.verbuise.com/signup?type=basic">Signup now.</a><br><br></td>
-								<td style="color:white;border: blue;text-align:center"><br><a class="button secondary" href="https://app.verbuise.com/signup?type=enterprise">Signup now.</a><br><br></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</content>
+    <script type="module">
+        import * as THREE from '//unpkg.com/three/build/three.module.js';
+
+        const world = Globe({ animateIn: false, backgroundColor: 'transparent' })
+        (document.getElementById('globe'))
+        .backgroundColor('#0000ff00')
+        .globeImageUrl('/earth.jpg')
+        .bumpImageUrl('/earth-topology.png');
+
+        // Auto-rotate
+        world.controls().autoRotate = true;
+        world.controls().autoRotateSpeed = 0.35;
+
+        window.addEventListener('resize', (event) => {
+            world.width([event.target.innerWidth])
+            world.height([event.target.innerHeight])
+        });
+
+        // Add clouds sphere
+        const CLOUDS_IMG_URL = '/clouds.png'; // from https://github.com/turban/webgl-earth
+        const CLOUDS_ALT = 0.004;
+        const CLOUDS_ROTATION_SPEED = -0.006; // deg/frame
+
+        new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
+        const clouds = new THREE.Mesh(
+            new THREE.SphereGeometry(world.getGlobeRadius() * (1 + CLOUDS_ALT), 50, 50),
+            new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
+        );
+        world.scene().add(clouds);
+
+        (function rotateClouds() {
+            clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
+            requestAnimationFrame(rotateClouds);
+        })();
+        });
+  </script>
+
+    <script src="/nav.js"></script>
 </body>
 
-<style>
-	/* Box sizing rules */
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-
-	/* Remove default margin */
-	body,
-	h1,
-	h2,
-	h3,
-	h4,
-	p,
-	figure,
-	blockquote,
-	dl,
-	dd {
-		margin: 0;
-	}
-
-	/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-	ul[role='list'],
-	ol[role='list'] {
-		list-style: none;
-	}
-
-	/* Set core root defaults */
-	html:focus-within {
-		scroll-behavior: smooth;
-	}
-
-	/* Set core body defaults */
-	body {
-		min-height: 100vh;
-		text-rendering: optimizeSpeed;
-		line-height: 1.5;
-	}
-
-	/* A elements that don't have a class get default styles */
-	a:not([class]) {
-		text-decoration-skip-ink: auto;
-	}
-
-	/* Make images easier to work with */
-	img,
-	picture {
-		max-width: 100%;
-		display: block;
-	}
-
-	/* Inherit fonts for inputs and buttons */
-	input,
-	button,
-	textarea,
-	select {
-		font: inherit;
-	}
-
-	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-	@media (prefers-reduced-motion: reduce) {
-		html:focus-within {
-			scroll-behavior: auto;
-		}
-
-		*,
-		*::before,
-		*::after {
-			animation-duration: 0.01ms !important;
-			animation-iteration-count: 1 !important;
-			transition-duration: 0.01ms !important;
-			scroll-behavior: auto !important;
-		}
-	}
-</style>
+</html>
