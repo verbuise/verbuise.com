@@ -199,8 +199,8 @@ nav ul li ul li h2 {
     float: left;
     width: 50%;
     padding: 20px;
-    height: 300px;
     position: relative;
+    height: 250px
 }
 
 .row {
@@ -229,9 +229,14 @@ nav ul li ul li h2 {
     transform: translate(-50%, -50%);
     padding: 8px;
     width: 90%;
-    height: 300px !important;
     border-radius: 12px;
     display: inline-block;
+}
+
+.column .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .column .content h2 {
@@ -239,21 +244,42 @@ nav ul li ul li h2 {
     font-size: xx-large;
     background-color: transparent;
     margin: 0;
-    color: rgb(0, 79, 32);
-}
-
-#features {
-    position: absolute;
-    top: 100vh;
-    margin: auto;
-    width: 100%;
-    left: 0;
-    right: 0;
+    color: rgb(0, 67, 54);
 }
 
 @media (max-width: 700px) {
     .column {
         width: 100%;
-        height: auto;
+        display: block;
+        height: 300px;
     }
+
+    .column .content {
+        margin: 0 20px
+    }
+}
+
+.icon {
+    background: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.icon span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: x-large !important;
+    margin: 0;
+    padding: 0;
+}
+
+#features {
+    margin-top: 40vh
 }
