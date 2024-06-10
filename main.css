@@ -240,8 +240,8 @@ nav ul li ul li h2 {
 }
 
 .column .content h2 {
-    font-weight: 900;
-    font-size: xx-large;
+    font-weight: 800;
+    font-size: 30px;
     background-color: transparent;
     margin: 0;
     color: rgb(0, 67, 54);
@@ -282,4 +282,67 @@ nav ul li ul li h2 {
 
 #features {
     margin-top: 40vh
+}
+
+#why {
+    background-color: white;
+    margin: 0;
+    padding: 20px 40px;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+#why .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    background-color: blue;
+    padding: 5px;
+    background: rgba(201, 255, 244, 0.643);
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 10px;
+    top: 0;
+}
+
+#why div {
+    position: relative;
+}
+
+#why .detail {
+    width: calc(100% - 70px);
+    display: inline-block;
+    margin-left: 70px;
+}
+
+#why .icon span {
+    font-size: x-small;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 60px;
+    padding: 80px;
+    background: rgb(255, 255, 255);
+}
+
+a.inline {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: rgb(0, 57, 45) !important;
+    font-size: medium !important;
+    border-bottom: 2px solid rgb(0, 57, 45) !important;
+    border-radius: 0 !important;
+    text-decoration: none;
+    margin-right: 20px !important;
+}
+
+#footer p {
+    color: rgb(0, 57, 45);
+    font-size: medium;
 }
