@@ -2,8 +2,8 @@ nav {
     width: calc(100% - 60px);
     background: transparent;
     color: rgb(0, 0, 45);
-    font-family: "muli", sans-serif;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     padding: 10px 30px;
     position: fixed;
     z-index: 1000000;
@@ -224,6 +224,7 @@ nav {
         font-weight: lighter;
         transition: 200ms;
         transform: translateY(1.8px);
+        font-weight: 500;
     }
 
     .dropdown_click:hover {
@@ -237,6 +238,7 @@ nav {
         font-size: small;
         font-weight: lighter;
         transition: 200ms;
+        font-weight: 500;
         transform: translateY(1.8px);
     }
 
@@ -300,4 +302,8 @@ nav {
     width: 16px;
     height: 0;
     display: block;
+}
+
+.logo h1 {
+    font-weight: 500;
 }

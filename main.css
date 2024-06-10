@@ -1,6 +1,5 @@
 :root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
+    font-family: "Poppins", sans-serif;
     zoom: 1.2;
     -moz-transform: scale(1.2);
     -moz-transform-origin: 0 0;
@@ -8,7 +7,7 @@
 }
 
 * {
-    transition: 250ms;
+    transition: 150ms;
     box-sizing: border-box;
 }
 
@@ -33,7 +32,7 @@ body {
 }
 
 h1 {
-    font-family: "muli", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 hr {
@@ -85,7 +84,7 @@ nav ul li a:hover {
 nav ul h1 {
     font-size: 30px;
     font-family: 'Poppins';
-    font-weight: bold;
+    font-weight: 400;
     border-bottom: 4px solid black;
     transition: 200ms;
 }
@@ -150,6 +149,26 @@ nav ul li ul li h2 {
     color: rgb(0, 67, 54);
     padding: 12px;
     border-radius: 8px;
+}
+
+.caption-alert {
+    font-weight: normal;
+    font-size: medium;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background: rgba(255, 241, 201, 0.764);
+    color: rgb(0, 67, 54);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tag {
+    padding: 2px 4px;
+    background-color: rgb(255, 174, 0);
+    display: inline-block;
+    border-radius: 4px;
+    color: black;
+    font-size: smaller
 }
 
 #main a {
@@ -347,4 +366,8 @@ a.inline {
 #footer p {
     color: rgb(0, 57, 45);
     font-size: medium;
+}
+
+#why h3 {
+    margin-bottom: -5px;
 }
