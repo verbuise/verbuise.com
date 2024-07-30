@@ -1,5 +1,5 @@
 :root {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Georgia', serif;
     zoom: 1.2;
     -moz-transform: scale(1.2);
     -moz-transform-origin: 0 0;
@@ -32,7 +32,8 @@ body {
 }
 
 h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
 }
 
 hr {
@@ -83,7 +84,8 @@ nav ul li a:hover {
 
 nav ul h1 {
     font-size: 30px;
-    font-family: 'Poppins';
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
     font-weight: 400;
     border-bottom: 4px solid black;
     transition: 200ms;
@@ -138,6 +140,7 @@ nav ul li ul li h2 {
     font-weight: bold;
     font-size: 4vh;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
 .caption {
@@ -370,4 +373,37 @@ a.inline {
 
 #why h3 {
     margin-bottom: -5px;
+}
+
+#footer * {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+}
+
+.post {
+    list-style-type: none;
+    padding: 1px 20px;
+    border-left: 4px solid rgb(0, 67, 54);
+    margin-bottom: 45px;
+}
+
+.post a p {
+    font-family: 'Georgia', sans !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+}
+
+.post a {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: rgb(0, 67, 54) !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+.post a h2 {
+    text-align: left !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
 }

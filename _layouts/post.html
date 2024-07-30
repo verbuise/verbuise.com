@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+    {% include head.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <div id="post">
+        <div class="breadcrumbs">
+           <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/ 
+           <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/ 
+            <span>{{ page.title }}</span>
+        </div>
+        <br>
+        <h1 style="margin-top: -20px !important">{{ page.title }}</h1>
+        <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+        {{ content }}
+    </div>
+    {% include footer.html %}
+</body>
+
+</html>

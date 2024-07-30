@@ -75,7 +75,7 @@ nav {
     border: 2px solid rgb(0, 164, 132);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 740px) {
     * {
         transition: 200ms;
     }
@@ -93,6 +93,7 @@ nav {
 
     .three_lines {
         margin-top: 0;
+        margin-right: -50px !important;
     }
 
     .three_lines a,
@@ -199,7 +200,7 @@ nav {
     }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 741px) {
 
     .three_lines,
     .three_lines_popup {
