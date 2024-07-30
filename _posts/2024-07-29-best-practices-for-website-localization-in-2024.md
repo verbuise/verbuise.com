@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Best Practices for Website Localization in 2024"
-date:   2024-07-29 17:47:40 -0400
+date:   2024-07-29
 categories: verbuise best practices localization
 ---
 

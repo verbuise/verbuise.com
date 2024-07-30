@@ -15,14 +15,31 @@
     {% include header.html %}
     <div id="post">
         <div class="breadcrumbs">
-           <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/ 
-           <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/ 
+            <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/
+            <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/
             <span>{{ page.title }}</span>
         </div>
         <br>
         <h1 style="margin-top: -20px !important">{{ page.title }}</h1>
         <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
         {{ content }}
+
+        <br><br>
+
+        <ul class="posts">
+            <h3>Some other articles</h3>
+
+            {% assign random_posts = site.posts | sample: 2 %}
+            {% for post in random_posts %}
+            <li class="post post_small">
+                <a href="{{ post.url }}" class="link">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
     {% include footer.html %}
 </body>

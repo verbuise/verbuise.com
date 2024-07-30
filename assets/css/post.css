@@ -14,7 +14,7 @@ body {
 
 /* Container for the post content */
 #post {
-    padding: 60px;
+    padding: 6vw;
     max-width: 900px;
     margin: 0 auto;
 }
