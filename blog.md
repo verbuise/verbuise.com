@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Verbuise Blog
 permalink: /blog/
 ---
 <h1>Blog</h1>
