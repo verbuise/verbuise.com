@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
@@ -14,17 +13,33 @@
 <body>
     {% include header.html %}
     <div id="post">
+        {% if page.post != false %}
+
+        <br>
+
         <div class="breadcrumbs">
             <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/
             <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/
             <span>{{ page.title }}</span>
         </div>
+
         <br>
+
         <h1 style="margin-top: -20px !important">{{ page.title }}</h1>
+        <br>
         <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+        {% endif %}
         {{ content }}
 
-        <br><br>
+        {% if page.post != false %}
+
+        <h2 id="start-your-free-trial">Start Your Free Trial</h2>
+        <p>Experience the power of Verbuise for yourself. Get started with a free trial today and see how easy it is to
+            reach a global audience.</p>
+        <p><a href="https://app.verbuise.com/trial" class="default primary">Start Your Free Trial</a>
+            <a href="/pricing" class="default secondary">View Pricing</a></p>
+
+        <br>
 
         <ul class="posts">
             <h3>Some other articles</h3>
@@ -40,6 +55,8 @@
             </li>
             {% endfor %}
         </ul>
+
+        {% endif %}
     </div>
     {% include footer.html %}
 </body>

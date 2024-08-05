@@ -1,15 +1,9 @@
-/* Base styles for the body to ensure a good starting point */
-body {
+#post {
     font-family: 'Georgia', serif;
     /* A classic serif font for readability */
     line-height: 1.6;
     /* Improved line height for better readability */
     color: #333;
-    /* Dark grey text for less strain on the eyes */
-    background-color: #f8f8f8;
-    /* Light background for good contrast */
-    margin: 0;
-    padding: 0;
 }
 
 /* Container for the post content */
@@ -102,7 +96,7 @@ body {
 }
 
 /* Link styles for text links */
-#post a {
+#post a:not(.default) {
     color: #007acc;
     /* Blue color for links */
     text-decoration: none;
@@ -111,8 +105,8 @@ body {
     /* Dashed underline for visual cue */
 }
 
-#post a:hover,
-#post a:focus {
+#post a:not(.default):hover,
+#post a:not(.default):focus {
     color: #005f99;
     /* Darker blue on hover */
     border-bottom: 1px solid #005f99;

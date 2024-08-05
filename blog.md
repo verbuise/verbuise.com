@@ -1,9 +1,15 @@
 ---
 layout: default
-title: Verbuise Blog
-permalink: /blog/
+title: "Verbuise Blog - Insights on Localization, AI, and Global Business Expansion"
+permalink: /blog
+description: "Explore the latest trends, tips, and insights on localization, AI, and global business expansion. Stay informed with expert articles that help you navigate the challenges of reaching a global audience with ease."
 ---
-<h1>Blog</h1>
+# Verbuise Blog
+
+Explore the latest trends, tips, and insights on localization, AI, and global business expansion. Stay informed with expert articles that help you navigate the challenges of reaching a global audience with ease.
+
+<br />
+
 <ul>
     {% for post in site.posts %}
     <li class="post">

@@ -91,6 +91,12 @@ nav ul h1 {
     transition: 200ms;
 }
 
+.logo img {
+    width: 50px;
+    margin-bottom: -17px;
+    display: inline-block;
+}
+
 nav ul h1:hover {
     border-bottom: 4px solid white;
     transition: 200ms;
@@ -174,7 +180,8 @@ nav ul li ul li h2 {
     font-size: smaller
 }
 
-#main a {
+#main a,
+#post a.default {
     margin: 0 10px;
     background: transparent;
     padding: 5px 20px;
@@ -187,22 +194,26 @@ nav ul li ul li h2 {
     transition: 0.3s ease;
     text-align: center;
     box-shadow: 0 2.5px 15px rgb(0, 164, 132);
+    font-family: 'Poppins';
 }
 
-#main a.primary {
+#main a.primary,
+#post a.default.primary{
     background: rgb(0, 134, 107);
     text-decoration: none;
     display: inline-block;
 }
 
-#main a.secondary {
+#main a.secondary,
+#post a.default.secondary {
     background: rgba(201, 255, 244, 0.643);
     color: rgb(0, 134, 107);
     text-decoration: none;
     display: inline-block;
 }
 
-#main a:hover {
+#main a:hover,
+#post a.default:hover {
     border: 2px solid rgb(0, 134, 107);
 }
 
@@ -432,4 +443,48 @@ a.inline {
     padding: 0;
     line-height: 1.1;
     padding-bottom: 15px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+}
+
+
+.pricing-table {
+    width: calc(100% - 20px);
+    min-width: 600px;
+    margin: 10px;
+    font-size: 0.9em;
+    font-family: 'Arial', sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th {
+    background-color: transparent;
+    color: black;
+    font-weight: normal;
+    text-transform: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
 }
