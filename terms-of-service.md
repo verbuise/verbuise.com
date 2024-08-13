@@ -2,12 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: Verbuise Legal
+title: Verbuise Terms of Service
 layout: default
-permalink: /legal
+permalink: /terms-of-service
 ---
-
-# Legal
 
 ## Terms of Service for verbuise.com and app.verbuise.com
 
@@ -59,47 +57,3 @@ These Terms shall be governed by and construed in accordance with the laws of th
 #### 11. Contact Information
 
 If you have any questions about these Terms, please contact us at hello@verbuise.com.
-
-<br />
-<hr>
-<br />
-
-## Privacy Policy for verbuise.com and app.verbuise.com
-
-**Effective Date:** August 4, 2024
-
-#### 1. Information We Collect
-
-- **Personal Information:** When you register for an account or use the Service, we may collect personal information such as your name, email address, phone number, and payment details.
-- **Usage Data:** We may collect information about how you use the Service, including your IP address, browser type, and activity logs.
-
-#### 2. How We Use Your Information
-
-- **Service Provision:** We use your information to provide and improve the Service, process payments, and communicate with you.
-- **Analytics:** We may use aggregated and anonymized data for analytics purposes to understand how the Service is used and improve its functionality.
-
-#### 3. Sharing of Information
-
-- **Third-Party Services:** We may share your information with third-party service providers who assist us in operating the Service, such as payment processors and hosting providers.
-- **Legal Compliance:** We may disclose your information if required by law or to protect our rights and the security of the Service.
-
-#### 4. Data Security
-
-We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no data transmission over the internet or storage system can be guaranteed to be 100% secure.
-
-#### 5. Your Rights
-
-- **Access and Correction:** You have the right to access and correct the personal information we hold about you.
-- **Data Deletion:** You may request the deletion of your account and personal information by contacting us at deletion@verbuise.com.
-
-#### 6. Cookies and Tracking Technologies
-
-We use cookies and similar tracking technologies to enhance your experience with the Service, analyze usage, and provide personalized content.
-
-#### 7. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website and updating the "Effective Date" at the top of this page.
-
-#### 8. Contact Information
-
-If you have any questions about this Privacy Policy, please contact us at hello@verbuise.com.
