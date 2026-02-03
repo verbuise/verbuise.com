@@ -1,131 +1,24 @@
 ---
-layout: default
-title: "Contact Verbuise - Get in Touch with Our Team"
+layout: post
+post: false
+title: "Contact Verbuise - Get in Touch with Our Localization Experts"
 permalink: /contact
-description: "Have questions about Verbuise? Contact our team for sales inquiries, support, or partnership opportunities. We typically respond within 24 hours."
-keywords: "contact Verbuise, localization support, Verbuise sales, translation service contact"
-breadcrumbs:
-  - name: "Contact"
-    url: "/contact"
+description: "Have questions or need support? Contact the Verbuise team today and let us help you with your localization needs. We're here to support your global growth."
 ---
 
-<!-- Hero Section -->
-<section class="hero" style="padding-bottom: var(--space-12);">
-    <div class="hero-inner">
-        <span class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            Get in Touch
-        </span>
-        <h1 class="hero-title">
-            Let's Talk About<br>
-            <span class="hero-title-gradient">Going Global</span>
-        </h1>
-        <p class="hero-description">
-            Have questions? We're here to help. Reach out and we'll get back to you within 24 hours.
-        </p>
-    </div>
-</section>
+# We're Here to Help You Localize Your Content
 
-<!-- Contact Options -->
-<section class="section" style="padding-top: 0;">
-    <div class="container">
-        <div class="features-grid">
-            <div class="feature-card" style="text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto var(--space-6);">&#128231;</div>
-                <h3 class="feature-title">General Inquiries</h3>
-                <p class="feature-description">
-                    Questions about Verbuise? We'd love to hear from you.
-                </p>
-                <p style="margin-top: var(--space-4);">
-                    <a href="mailto:hello@verbuise.com" class="btn btn-primary">hello@verbuise.com</a>
-                </p>
-            </div>
-            <div class="feature-card" style="text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto var(--space-6);">&#128188;</div>
-                <h3 class="feature-title">Sales & Enterprise</h3>
-                <p class="feature-description">
-                    Looking for a custom solution? Let's discuss your needs.
-                </p>
-                <p style="margin-top: var(--space-4);">
-                    <a href="mailto:dedicated@verbuise.com" class="btn btn-primary">dedicated@verbuise.com</a>
-                </p>
-            </div>
-            <div class="feature-card" style="text-align: center;">
-                <div class="feature-icon" style="margin: 0 auto var(--space-6);">&#128187;</div>
-                <h3 class="feature-title">Developer Support</h3>
-                <p class="feature-description">
-                    Technical questions? Our dev team is ready to help.
-                </p>
-                <p style="margin-top: var(--space-4);">
-                    <a href="https://developer.verbuise.com/" class="btn btn-secondary">Developer Docs</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+We’d love to hear from you! Whether you have questions, need support, or want to learn more about how Verbuise can help your business reach a global audience, feel free to get in touch with us.
 
-<!-- Social Links -->
-<section class="section bg-gray">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Follow Us</span>
-            <h2 class="section-title">Connect on Social</h2>
-            <p class="section-description">
-                Stay updated with the latest news, features, and localization tips.
-            </p>
-        </div>
-        <div style="display: flex; justify-content: center; gap: var(--space-6); flex-wrap: wrap;">
-            <a href="https://twitter.com/verbuise" target="_blank" rel="noopener" class="btn btn-secondary" style="gap: var(--space-2);">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                Twitter
-            </a>
-            <a href="https://instagram.com/verbuise" target="_blank" rel="noopener" class="btn btn-secondary" style="gap: var(--space-2);">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-            </a>
-            <a href="https://linkedin.com/company/verbuise" target="_blank" rel="noopener" class="btn btn-secondary" style="gap: var(--space-2);">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-            </a>
-        </div>
-    </div>
-</section>
+## Email Us
+For any inquiries, please reach out to us at:
+- **Email**: [hello@verbuise.com](mailto:hello@verbuise.com)
 
-<!-- FAQ Section -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">FAQ</span>
-            <h2 class="section-title">Quick Answers</h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question">What's the typical response time?</button>
-                <div class="faq-answer">We typically respond to all inquiries within 24 hours during business days. Enterprise customers with dedicated support receive responses within 4 hours.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Do you offer demos?</button>
-                <div class="faq-answer">Yes! We offer personalized demos for teams interested in Verbuise. Contact our sales team at dedicated@verbuise.com to schedule a demo.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">How can I report a bug?</button>
-                <div class="faq-answer">You can report bugs directly through our support portal or by emailing hello@verbuise.com. Include as much detail as possible to help us resolve the issue quickly.</div>
-            </div>
-        </div>
-    </div>
-</section>
+Our team will get back to you as soon as possible, typically within 24-48 hours.
 
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="cta-inner">
-        <h2 class="cta-title">Ready to Get Started?</h2>
-        <p class="cta-description">
-            Skip the wait. Start your free trial now and see Verbuise in action.
-        </p>
-        <div class="cta-buttons">
-            <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary btn-lg">
-                Start Free Trial
-            </a>
-        </div>
-    </div>
-</section>
+## Connect on Social Media
+Stay updated with the latest news, features, and tips from Verbuise by following us on social media:
+- **Twitter**: [@verbuise](https://twitter.com/verbuise)
+- **Instagram**: [@verbuise](https://instagram.com/verbuise)
+
+Feel free to drop us a message or tag us in your posts—we love connecting with our community!

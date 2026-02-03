@@ -1,371 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
     {% include head.html %}
 </head>
+
 <body>
     {% include header.html %}
+<div id="main">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Trusted by 500+ companies worldwide
+    <h1>Revolutionize Your Global Reach with AI-Powered Localization</h1>
+    <h2 class="caption">Manage translations, currency conversions, and images with ease.</h2>
+    <a class="primary" href="https://app.verbuise.com/?onboard=true&trial=true">Get Started for Free</a>
+    <a class="secondary">Watch Demo</a>
+
+    <div id="features">
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <div class="icon"><span>🌎</span></div>
+                    <h2>Instant Translations</h2>
+                    <p>Translate your website, app, or product content instantly into over 300 languages and 500
+                        regional
+                        dialects.</p>
+                </div>
             </div>
-            <h1 class="hero-title">
-                Go Global in Minutes,<br>
-                <span class="hero-title-gradient">Not Months</span>
-            </h1>
-            <p class="hero-description">
-                Verbuise is the AI-powered localization platform that translates your website, app, or product into 300+ languages instantly. No complex setup. No technical skills required.
-            </p>
-            <div class="hero-cta">
-                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary btn-lg">
-                    Start Free Trial
-                </a>
-                <a href="/pricing" class="btn btn-secondary btn-lg">
-                    View Pricing
-                </a>
-            </div>
-            <div class="hero-proof">
-                <div class="hero-stat">
-                    <span class="hero-stat-value">{{ site.stats.languages }}</span>
-                    <span class="hero-stat-label">Languages</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">{{ site.stats.customers }}</span>
-                    <span class="hero-stat-label">Companies</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">{{ site.stats.uptime }}</span>
-                    <span class="hero-stat-label">Uptime</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">{{ site.stats.api_calls }}</span>
-                    <span class="hero-stat-label">API Calls/Month</span>
-                </div>
+            <div class="column">
+                <img src="/assets/img_1.jpg">
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Features</span>
-                <h2 class="section-title">Everything You Need to Go Global</h2>
-                <p class="section-description">
-                    One platform for all your localization needs. From AI translation to currency conversion, we've got you covered.
+        <hr>
+
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <div class="icon"><span>🖼️</span></div>
+                    <h2>Localized Media</h2>
+                    <p>Change images and visuals based on the user's location to maximize engagement.</p>
+                </div>
+            </div>
+            <div class="column">
+                <img src="/assets/img_2.jpg">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="column">
+                <div class="content">
+                    <div class="icon"><span>💱</span></div>
+                    <h2>Currency Conversions</h2>
+                    <p>Automatically convert prices to your user's local currency out of 161 supported currencies
+                        for a
+                        seamless shopping
+                        experience. </p>
+                </div>
+            </div>
+            <div class="column">
+                <img src="/assets/img_3.jpg">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <ul>
+        {% assign post = site.posts | first %}
+        <h3>The latest from our blog.</h3>
+        <li class="post">
+            <a href="{{ post.url }}" class="link">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+                <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+            </a>
+        </li>
+    </ul>
+
+    <div id="why">
+        <h1>Why choose Verbuise?</h1>
+        <div>
+            <div class="icon"><span>🧠</span></div>
+            <div class="detail">
+                <h3>VerbuiseAI</h3>
+                <p>VerbuiseAI offers advanced localization capabilities in over 300 languages and 500 dialects,
+                    ensuring your content resonates
+                    with global
+                    audiences by seamlessly adapting to diverse languages, dialects, and cultures.
                 </p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#127760;</div>
-                    <h3 class="feature-title">AI Translation</h3>
-                    <p class="feature-description">
-                        Powered by advanced machine learning, translate content into 300+ languages with human-like accuracy. Context-aware translations that preserve your brand voice.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128444;</div>
-                    <h3 class="feature-title">Image Localization</h3>
-                    <p class="feature-description">
-                        Automatically swap images based on user location. Show culturally relevant visuals to maximize engagement and conversion rates.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128177;</div>
-                    <h3 class="feature-title">Currency Conversion</h3>
-                    <p class="feature-description">
-                        Display prices in 161 local currencies with real-time exchange rates. Reduce cart abandonment by showing familiar pricing.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3 class="feature-title">Instant Integration</h3>
-                    <p class="feature-description">
-                        Add one line of code and you're live. Works with any website, app, or platform. No complex setup or technical expertise required.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128101;</div>
-                    <h3 class="feature-title">Team Collaboration</h3>
-                    <p class="feature-description">
-                        Built for teams. Assign roles, manage workflows, and collaborate with translators and reviewers in real-time.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128202;</div>
-                    <h3 class="feature-title">Analytics Dashboard</h3>
-                    <p class="feature-description">
-                        Track localization performance across regions. See which languages drive the most engagement and revenue.
-                    </p>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section bg-gray">
-        <div class="container">
-            <div class="benefits-row">
-                <div class="benefits-content">
-                    <span class="benefits-label">AI-Powered</span>
-                    <h2 class="benefits-title">Translation That Actually Understands Context</h2>
-                    <p class="benefits-description">
-                        Unlike basic translation tools, VerbuiseAI understands context, idioms, and cultural nuances. Your content sounds natural in every language.
-                    </p>
-                    <ul class="benefits-list">
-                        <li>300+ languages and 500+ regional dialects</li>
-                        <li>Context-aware translations that preserve meaning</li>
-                        <li>Automatic glossary and style guide compliance</li>
-                        <li>Human-in-the-loop review options</li>
-                    </ul>
-                    <a href="/features#ai" class="btn btn-primary">Learn About VerbuiseAI</a>
-                </div>
-                <div class="benefits-image">
-                    <img src="/assets/img_1.jpg" alt="VerbuiseAI Translation Interface showing multilingual content management">
-                </div>
-            </div>
-            <div class="benefits-row">
-                <div class="benefits-content">
-                    <span class="benefits-label">Visual Localization</span>
-                    <h2 class="benefits-title">Show the Right Image to the Right Audience</h2>
-                    <p class="benefits-description">
-                        Images matter. Our geo-aware image system automatically displays culturally relevant visuals to maximize engagement.
-                    </p>
-                    <ul class="benefits-list">
-                        <li>Automatic image swapping by region</li>
-                        <li>A/B testing for visual content</li>
-                        <li>CDN-optimized delivery worldwide</li>
-                        <li>Supports all image formats</li>
-                    </ul>
-                    <a href="/features#image" class="btn btn-primary">Explore Image Localization</a>
-                </div>
-                <div class="benefits-image">
-                    <img src="/assets/img_2.jpg" alt="Image localization dashboard showing region-specific visual content">
-                </div>
-            </div>
-            <div class="benefits-row">
-                <div class="benefits-content">
-                    <span class="benefits-label">E-commerce Ready</span>
-                    <h2 class="benefits-title">Currency Conversion That Converts</h2>
-                    <p class="benefits-description">
-                        Customers abandon carts when they see unfamiliar currencies. Show prices in 161 local currencies with real-time rates.
-                    </p>
-                    <ul class="benefits-list">
-                        <li>161 currencies supported</li>
-                        <li>Real-time exchange rate updates</li>
-                        <li>Automatic price formatting by region</li>
-                        <li>E-commerce platform integrations</li>
-                    </ul>
-                    <a href="/features#financial" class="btn btn-primary">See Currency Features</a>
-                </div>
-                <div class="benefits-image">
-                    <img src="/assets/img_3.jpg" alt="Currency conversion API showing multi-currency pricing">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-value">300+</div>
-                    <div class="stat-label">Languages Supported</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">500+</div>
-                    <div class="stat-label">Happy Customers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">99.9%</div>
-                    <div class="stat-label">Uptime SLA</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">10M+</div>
-                    <div class="stat-label">API Calls Monthly</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Testimonials</span>
-                <h2 class="section-title">Loved by Teams Worldwide</h2>
-                <p class="section-description">
-                    See why companies choose Verbuise to power their global expansion.
+        <div>
+            <div class="icon"><span>🔧</span></div>
+            <div class="detail">
+                <h3>Simple Integration</h3>
+                <p>Integrate Verbuise with your platform easily using our libraries, platform integrations, or API.
                 </p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">
-                        "Verbuise reduced our localization time from weeks to hours. The AI translation quality is incredible - our international customers can't tell it wasn't human-translated."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SM</div>
-                        <div>
-                            <div class="testimonial-name">Sarah Mitchell</div>
-                            <div class="testimonial-role">VP of Growth, TechFlow</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">
-                        "The currency conversion feature alone increased our international sales by 34%. Customers love seeing prices in their local currency."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JK</div>
-                        <div>
-                            <div class="testimonial-name">James Kim</div>
-                            <div class="testimonial-role">E-commerce Director, ShopGlobal</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">
-                        "We tried three other localization platforms before Verbuise. None came close to this level of accuracy and ease of use. Setup took 10 minutes."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ER</div>
-                        <div>
-                            <div class="testimonial-name">Elena Rodriguez</div>
-                            <div class="testimonial-role">CTO, AppStart</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Integration Section -->
-    <section class="section bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Integrations</span>
-                <h2 class="section-title">Works With Your Stack</h2>
-                <p class="section-description">
-                    One line of code. That's all it takes to add Verbuise to any platform.
+        <div>
+            <div class="icon"><span>🔑</span></div>
+            <div class="detail">
+                <h3>User Authentication</h3>
+                <p>Secure, passwordless authentication with phone, email, or social logins.
                 </p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#128187;</div>
-                    <h3 class="feature-title">JavaScript SDK</h3>
-                    <p class="feature-description">
-                        Drop-in SDK for any web application. React, Vue, Angular, or vanilla JS - we support them all.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128241;</div>
-                    <h3 class="feature-title">Mobile SDKs</h3>
-                    <p class="feature-description">
-                        Native SDKs for iOS (Swift) and Android (Kotlin). Localize your mobile apps with ease.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">&#128268;</div>
-                    <h3 class="feature-title">REST API</h3>
-                    <p class="feature-description">
-                        Full-featured REST API for custom integrations. Build exactly what you need.
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-8">
-                <a href="https://developer.verbuise.com/" class="btn btn-secondary">View Developer Docs</a>
-            </div>
         </div>
-    </section>
-
-    <!-- Blog Preview -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Blog</span>
-                <h2 class="section-title">Latest from Our Blog</h2>
-                <p class="section-description">
-                    Insights on localization, internationalization, and going global.
+        <div>
+            <div class="icon"><span>👥</span></div>
+            <div class="detail">
+                <h3>Team Collaboration</h3>
+                <p>Collaborate efficiently with team roles like creator, admin, developer, and translator.
                 </p>
             </div>
-            <div class="blog-grid">
-                {% for post in site.posts limit:3 %}
-                <article class="blog-card">
-                    <div class="blog-card-image"></div>
-                    <div class="blog-card-content">
-                        <div class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</div>
-                        <h3 class="blog-card-title">
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </h3>
-                        <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-            <div class="text-center mt-8">
-                <a href="/blog" class="btn btn-secondary">View All Posts</a>
+        </div>
+        <div>
+            <div class="icon"><span>📁</span></div>
+            <div class="detail">
+                <h3>Multi-Project Management</h3>
+                <p>Manage multiple projects and clients with unique API keys for each.
+                </p>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-inner">
-            <h2 class="cta-title">Ready to Go Global?</h2>
-            <p class="cta-description">
-                Join 500+ companies using Verbuise to reach customers worldwide. Start your free trial today - no credit card required.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary btn-lg">
-                    Start Free Trial
-                </a>
-                <a href="/contact" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
-                    Talk to Sales
-                </a>
-            </div>
-        </div>
-    </section>
+    </div>
 
     {% include footer.html %}
 
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('active');
-            });
+    <div id="globe"></div>
+
+    <script src="//unpkg.com/globe.gl"></script>
+
+    <script type="module">
+        import * as THREE from '//unpkg.com/three/build/three.module.js';
+
+        const world = Globe({ animateIn: false, backgroundColor: 'transparent' })
+        (document.getElementById('globe'))
+        .backgroundColor('#0000ff00')
+        .globeImageUrl('/assets/globe/earth.jpg')
+        .bumpImageUrl('/assets/globe/earth-topology.png');
+
+        // Auto-rotate
+        world.controls().autoRotate = true;
+        world.controls().autoRotateSpeed = 0.35;
+
+        window.addEventListener('resize', (event) => {
+            world.width([event.target.innerWidth])
+            world.height([event.target.innerHeight])
         });
 
-        // Nav scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
+        // Add clouds sphere
+        const CLOUDS_IMG_URL = '/assets/globe/clouds.png'; // from https://github.com/turban/webgl-earth
+        const CLOUDS_ALT = 0.004;
+        const CLOUDS_ROTATION_SPEED = -0.006; // deg/frame
 
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.nav-mobile-toggle');
-        const mobileMenu = document.querySelector('.nav-mobile');
-        if (mobileToggle && mobileMenu) {
-            mobileToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-        }
-    </script>
-</body>
+        new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
+        const clouds = new THREE.Mesh(
+            new THREE.SphereGeometry(world.getGlobeRadius() * (1 + CLOUDS_ALT), 50, 50),
+            new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
+        );
+        world.scene().add(clouds);
+
+        (function rotateClouds() {
+            clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
+            requestAnimationFrame(rotateClouds);
+        })();
+        });
+  </script>
+    </body>
+
 </html>

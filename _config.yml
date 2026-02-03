@@ -1,81 +1,23 @@
-# Site Configuration
-title: "Verbuise - AI-Powered Localization Platform"
-tagline: "Go Global in Minutes, Not Months"
+# Site settings
+title: "Verbuise: AI-Powered Localization Platform"
 email: hello@verbuise.com
 description: >-
-  Verbuise is the #1 AI-powered localization platform trusted by 500+ companies.
-  Translate websites, apps, and products into 300+ languages instantly.
-  Automate currency conversion, image localization, and content management.
-  Start your free trial today.
+  Verbuise is an AI-powered localization platform for websites, apps, and products.
+  Translate into 300+ languages, localize images by region, and convert currencies automatically.
+  Simple API integration. Start your free trial today.
 baseurl: ""
 url: "https://verbuise.com"
-
-# Social & Contact
 twitter_username: verbuise
-instagram_username: verbuise
-github_username: verbuise
-linkedin_url: "https://linkedin.com/company/verbuise"
 
-# Company Info (for schema.org)
-company:
-  name: "Verbuise"
-  founded: "2024"
-  employees: "10-50"
-  headquarters: "San Francisco, CA"
-
-# Product Stats (for social proof)
-stats:
-  customers: "500+"
-  languages: "300+"
-  dialects: "500+"
-  currencies: "161"
-  uptime: "99.9%"
-  api_calls: "10M+"
-
-# Default Front Matter
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: post
       permalink: /blog/:year/:title
-      og_type: article
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
-
-# Collections
-collections:
-  use_cases:
-    output: true
-    permalink: /use-cases/:name/
-  integrations:
-    output: true
-    permalink: /integrations/:name/
 
 # Build settings
 theme: null
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Markdown settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# Exclude from processing
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/
-  - README.md

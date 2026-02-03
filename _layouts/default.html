@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
     {% include head.html %}
 </head>
+
 <body>
     {% include header.html %}
-
-    <main style="padding-top: 72px;">
+    <div id="main">
         {{ content }}
-    </main>
-
-    {% include footer.html %}
-
-    <script>
-        // Nav scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.nav-mobile-toggle');
-        const mobileMenu = document.querySelector('.nav-mobile');
-        if (mobileToggle && mobileMenu) {
-            mobileToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-        }
-
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-    </script>
+        {% include footer.html %}
+    </div>
 </body>
+
 </html>
