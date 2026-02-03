@@ -1,61 +1,81 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: "Verbuise: Content Management & AI Localization"
+# Site Configuration
+title: "Verbuise - AI-Powered Localization Platform"
+tagline: "Go Global in Minutes, Not Months"
 email: hello@verbuise.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Verbuise is an AI-powered content localization platform that simplifies website, app, and product translation. Easily integrate with our platform to localize language, images, and currency, ensuring your content resonates globally. Start your free trial today!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://verbuise.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: verbuise
-github_username:  jekyll
+description: >-
+  Verbuise is the #1 AI-powered localization platform trusted by 500+ companies.
+  Translate websites, apps, and products into 300+ languages instantly.
+  Automate currency conversion, image localization, and content management.
+  Start your free trial today.
+baseurl: ""
+url: "https://verbuise.com"
 
+# Social & Contact
+twitter_username: verbuise
+instagram_username: verbuise
+github_username: verbuise
+linkedin_url: "https://linkedin.com/company/verbuise"
+
+# Company Info (for schema.org)
+company:
+  name: "Verbuise"
+  founded: "2024"
+  employees: "10-50"
+  headquarters: "San Francisco, CA"
+
+# Product Stats (for social proof)
+stats:
+  customers: "500+"
+  languages: "300+"
+  dialects: "500+"
+  currencies: "161"
+  uptime: "99.9%"
+  api_calls: "10M+"
+
+# Default Front Matter
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
+      layout: post
       permalink: /blog/:year/:title
+      og_type: article
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+# Collections
+collections:
+  use_cases:
+    output: true
+    permalink: /use-cases/:name/
+  integrations:
+    output: true
+    permalink: /integrations/:name/
 
 # Build settings
 theme: null
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md

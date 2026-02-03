@@ -1,64 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
     {% include head.html %}
 </head>
-
 <body>
     {% include header.html %}
-    <div id="post">
-        {% if page.post != false %}
 
-        <br>
-
-        <div class="breadcrumbs">
-            <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/
-            <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/
-            <span>{{ page.title }}</span>
+    {% if page.post != false %}
+    <!-- Post Header -->
+    <header class="post-header">
+        <div class="container">
+            <nav style="margin-bottom: var(--space-4); font-size: 0.875rem;">
+                <a href="/" style="color: var(--gray-500);">Home</a>
+                <span style="color: var(--gray-400); margin: 0 0.5rem;">/</span>
+                <a href="/blog" style="color: var(--gray-500);">Blog</a>
+                <span style="color: var(--gray-400); margin: 0 0.5rem;">/</span>
+                <span style="color: var(--gray-700);">Article</span>
+            </nav>
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-meta">
+                <span>{{ page.date | date: "%B %d, %Y" }}</span>
+                {% if page.author %}
+                <span>by {{ page.author }}</span>
+                {% endif %}
+                {% if page.reading_time %}
+                <span>{{ page.reading_time }} min read</span>
+                {% endif %}
+            </div>
         </div>
+    </header>
 
-        <br>
-
-        <h1 style="margin-top: -20px !important">{{ page.title }}</h1>
-        <br>
-        <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
-        {% endif %}
+    <!-- Post Content -->
+    <article class="post-content">
         {{ content }}
+    </article>
 
-        {% if page.post != false %}
+    <!-- Post CTA -->
+    <section class="section bg-gray">
+        <div class="container" style="max-width: 720px;">
+            <div class="feature-card" style="text-align: center;">
+                <h2 style="margin-bottom: var(--space-4);">Ready to Go Global?</h2>
+                <p style="margin-bottom: var(--space-6);">
+                    Experience the power of Verbuise for yourself. Start your free trial today and see how easy it is to reach a global audience.
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary">Start Free Trial</a>
+                    <a href="/pricing" class="btn btn-secondary">View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2 id="start-your-free-trial">Start Your Free Trial</h2>
-        <p>Experience the power of Verbuise for yourself. Get started with a free trial today and see how easy it is to
-            reach a global audience.</p>
-        <p><a href="https://app.verbuise.com/trial" class="default primary">Start Your Free Trial</a>
-            <a href="/pricing" class="default secondary">View Pricing</a></p>
+    <!-- Related Posts -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Related Articles</h2>
+            </div>
+            <div class="blog-grid" style="max-width: 900px; margin: 0 auto;">
+                {% assign random_posts = site.posts | where_exp: "post", "post.url != page.url" | sample: 3 %}
+                {% for post in random_posts %}
+                <article class="blog-card">
+                    <div class="blog-card-image"></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</div>
+                        <h3 class="blog-card-title">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+                        <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
-        <br>
-
-        <ul class="posts">
-            <h3>Some other articles</h3>
-
-            {% assign random_posts = site.posts | sample: 2 %}
-            {% for post in random_posts %}
-            <li class="post post_small">
-                <a href="{{ post.url }}" class="link">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                    <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-
-        {% endif %}
+    {% else %}
+    <!-- Non-blog post content (e.g., features, pricing pages using post layout) -->
+    <div class="post-content" style="padding-top: var(--space-16);">
+        {{ content }}
     </div>
-    {% include footer.html %}
-</body>
+    {% endif %}
 
+    {% include footer.html %}
+
+    <script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.nav-mobile-toggle');
+        const mobileMenu = document.querySelector('.nav-mobile');
+        if (mobileToggle && mobileMenu) {
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
 </html>
