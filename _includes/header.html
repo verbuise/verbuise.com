@@ -1,87 +1,39 @@
-<nav>
-    <div>
-        <a class="logo" href="/">
-            <img src="/assets/logo/1.svg" alt="Verbuise Logo - AI-Powered Localization Platform">
-            <h1>Verbuise</h1>
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="/">
+            <img src="/assets/logo/1.svg" alt="Verbuise Logo">
+            <span>Verbuise</span>
         </a>
 
-        <span class="three_lines">
-            <button class="button-link"
-                onclick="document.getElementById('nav_interactive').style.display = 'block'; document.body.style.overflow = 'hidden'">
-                <span class="toggle_bar"></span>
-                <span class="toggle_bar"></span>
-                <span class="toggle_bar"></span>
-            </button>
-        </span>
-        <span style="float: right;margin-right: 10px;margin-top: 5px;" class="nav_interactive" id="nav_interactive">
-            <span class="three_lines_popup">
-                <button class="button-link"
-                    onclick="document.getElementById('nav_interactive').style.display = 'none'; document.body.style.overflow = 'inherit'">
-                    ✕
-                </button>
-            </span>
-            <div class="dropdown">
-                <a class="dropdown_link  navigation" href="/pricing">
-                    <span class="inter">
-                        Pricing
-                    </span>
-                </a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="/features">Features</a></li>
+            <li><a class="nav-link" href="/pricing">Pricing</a></li>
+            <li><a class="nav-link" href="/blog">Blog</a></li>
+            <li><a class="nav-link" href="https://developer.verbuise.com/">Developers</a></li>
+            <li><a class="nav-link" href="/about">About</a></li>
+        </ul>
 
-                <a class="dropdown_small  navigation" href="/pricing">
-                    <span class="inter">
-                        Pricing
-                    </span>
-                </a>
-            </div>
-            <div class="dropdown">
-                <a class="dropdown_link  navigation" href="/blog">
-                    <span class="inter">
-                        Blog
-                    </span>
-                </a>
+        <div class="nav-actions">
+            <a href="https://app.verbuise.com/login" class="btn btn-ghost">Log in</a>
+            <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary">Start Free Trial</a>
+        </div>
 
-                <a class="dropdown_small  navigation" href="/blog">
-                    <span class="inter">
-                        Blog
-                    </span>
-                </a>
-            </div>
-            <div class="dropdown">
-                <a class="navigation dropdown_click" href="javascript:dropdown('orgDropdown')">
-                    <span class="inter">
-                        Products <span class="up">⌄</span>
-                    </span>
-                </a>
-                <a class="navigation dropdown_small">
-                    <span class="inter">Products</span>
-                </a>
-                <div id="orgDropdown" class="dropdown-content right">
-                    <a href="/features#ai">AI translation</a>
-                    <a href="/features#text">Text localization</a>
-                    <a href="/features#image">Image localization</a>
-                    <a href="/features#financial">Currency conversion</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a class="navigation dropdown_click" href="javascript:dropdown('alertDropdown')">
-                    <span class="inter">
-                        Developers
-                        <span class="up">⌄</span>
-                    </span>
-                </a>
-                <a class="navigation dropdown_small">
-                    <span class="inter">Developers</span>
-                </a>
-                <div id="alertDropdown" class="dropdown-content right">
-                    <a href="https://developer.verbuise.com/">Developer site</a>
-                    <a href="https://developer.verbuise.com/ref/api">API reference</a>
-                    <hr>
-                    <a href="https://developer.verbuise.com/ref/sdk/swift">Swift SDK</a>
-                    <a href="https://developer.verbuise.com/ref/sdk/web">Web SDK</a>
-                    <a href="https://developer.verbuise.com/ref/sdk">Other SDKs</a>
-                </div>
-            </div>
-        </span>
+        <button class="nav-mobile-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="nav-mobile">
+        <a class="nav-link" href="/features">Features</a>
+        <a class="nav-link" href="/pricing">Pricing</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link" href="https://developer.verbuise.com/">Developers</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/contact">Contact</a>
+        <hr style="border-color: var(--gray-200); margin: 1rem 0;">
+        <a href="https://app.verbuise.com/login" class="btn btn-secondary" style="width: 100%; justify-content: center;">Log in</a>
+        <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" style="width: 100%; justify-content: center;">Start Free Trial</a>
     </div>
 </nav>
-    <script src="/assets/js/nav.js"></script>

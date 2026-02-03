@@ -1,2 +1,23 @@
+# Robots.txt for verbuise.com
+
 User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://verbuise.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
