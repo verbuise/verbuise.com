@@ -15,47 +15,85 @@
 <body>
     {% include header.html %}
 
+    <!-- Demo bar (shown when a market is active) -->
+    <div id="market-demo-bar" class="market-demo-bar">
+        <span class="bar-text"></span>
+        <button class="bar-reset" onclick="setMarket('global')">✕ Reset</button>
+    </div>
+
     <!-- ═══════════════════════
          HERO
     ═══════════════════════ -->
     <section id="hero">
         <div class="container">
-            <p class="section-label">Globalization Runtime</p>
+            <p class="section-label" data-vb="label">Globalization Runtime</p>
 
-            <h1>Your product should feel<br>native everywhere.</h1>
+            <h1 data-vb="headline">Your product should feel<br>native everywhere.</h1>
 
-            <p class="hero-sub">Verbuise is the adaptive layer that automatically adjusts language, currency, images, and tone for each market. No workflow. No rebuilding. Just behavior.</p>
+            <p class="hero-sub" data-vb="sub">Verbuise is the adaptive layer that automatically adjusts language, currency, images, and tone for each market. No workflow. No rebuilding. Just behavior.</p>
 
             <div class="hero-actions">
-                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary">Start adapting free</a>
+                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" data-vb="cta">Start adapting free</a>
                 <a href="#how" class="btn btn-ghost">See how it works &rarr;</a>
             </div>
 
+            <div class="market-switcher">
+                <span class="ms-label">See it in:</span>
+                <div id="ms-wrap">
+                    <button class="ms-btn" onclick="toggleMsMenu()">
+                        <span id="ms-flag">🌐</span>
+                        <span id="ms-name">Global</span>
+                        <span class="ms-arrow">▾</span>
+                    </button>
+                    <div id="ms-menu" class="ms-menu">
+                        <div class="ms-option active" onclick="setMarket('global')">
+                            <span class="ms-option-flag">🌐</span> Global
+                        </div>
+                        <div class="ms-option" onclick="setMarket('japan')">
+                            <span class="ms-option-flag">🇯🇵</span> 日本
+                        </div>
+                        <div class="ms-option" onclick="setMarket('germany')">
+                            <span class="ms-option-flag">🇩🇪</span> Deutschland
+                        </div>
+                        <div class="ms-option" onclick="setMarket('mexico')">
+                            <span class="ms-option-flag">🇲🇽</span> México
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="market-cards">
-                <div class="market-card">
+                <div class="market-card" data-market="global">
                     <div class="market-bar us-bar"></div>
                     <span class="market-flag">🇺🇸</span>
                     <div class="market-region">United States</div>
                     <div class="market-cta">Get Started Free</div>
                     <div class="market-price">$29<span>/mo</span></div>
                 </div>
-                <div class="market-card">
+                <div class="market-card" data-market="japan">
                     <div class="market-bar jp-bar"></div>
                     <span class="market-flag">🇯🇵</span>
                     <div class="market-region">日本</div>
                     <div class="market-cta">無料で始める</div>
                     <div class="market-price">¥4,200<span>/月</span></div>
                 </div>
-                <div class="market-card">
+                <div class="market-card" data-market="germany">
                     <div class="market-bar de-bar"></div>
                     <span class="market-flag">🇩🇪</span>
                     <div class="market-region">Deutschland</div>
                     <div class="market-cta">Kostenlos starten</div>
                     <div class="market-price">€27<span>/Monat</span></div>
                 </div>
+                <div class="market-card" data-market="mexico">
+                    <div class="market-bar mx-bar"></div>
+                    <span class="market-flag">🇲🇽</span>
+                    <div class="market-region">México</div>
+                    <div class="market-cta">Comenzar gratis</div>
+                    <div class="market-price">MX$540<span>/mes</span></div>
+                </div>
             </div>
 
-            <p class="hero-annotation">↑ Same product. One codebase. Every market.</p>
+            <p class="hero-annotation" data-vb="annotation">↑ Same product. One codebase. Every market.</p>
         </div>
     </section>
 
@@ -67,7 +105,7 @@
     <section id="problem">
         <div class="container">
             <p class="section-label">The Reality</p>
-            <h2>The real competitor<br>isn't Phrase or Lokalise.<br>It's <span class="accent-text">doing nothing.</span></h2>
+            <h2>The real competitor<br>isn't another tool.<br>It's <span class="accent-text">doing nothing.</span></h2>
             <p class="section-sub">Most products skip global markets—not because builders don't care, but because localization has always meant building a second product. We remove that friction entirely.</p>
 
             <div class="pain-grid">
@@ -367,6 +405,8 @@
     </section>
 
     {% include footer.html %}
+
+    <script src="{{ '/assets/js/market-switcher.js' | relative_url }}"></script>
 
 </body>
 </html>
