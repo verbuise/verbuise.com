@@ -211,6 +211,9 @@ nav > div {
   .dropdown_click:hover { color: #111; background: #f4f4f4; }
 }
 
+/* ---- Mobile subnav (hidden by default, shown on mobile) ---- */
+.mobile-subnav { display: none; }
+
 /* ======= MOBILE ======= */
 @media (max-width: 740px) {
   .three_lines { display: block; }
@@ -239,6 +242,34 @@ nav > div {
     border-bottom: 1px solid #ebebeb;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  .mobile-subnav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .mobile-sublink {
+    display: block;
+    padding: 13px 28px 13px 44px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background 0.1s, color 0.1s;
+  }
+
+  .mobile-sublink:last-child { border-bottom: none; }
+
+  .mobile-sublink:active {
+    background: #ebebeb;
+    color: #111;
   }
 
   .dropdown_link  { display: none !important; }
@@ -252,4 +283,9 @@ nav > div {
     display: block;
     text-align: center;
   }
+}
+
+/* ======= DESKTOP — ensure mobile-subnav stays hidden ======= */
+@media (min-width: 741px) {
+  .mobile-subnav { display: none !important; }
 }
