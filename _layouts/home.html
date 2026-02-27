@@ -46,16 +46,16 @@
                         <span class="ms-arrow">▾</span>
                     </button>
                     <div id="ms-menu" class="ms-menu">
-                        <div class="ms-option active" onclick="setMarket('global')">
+                        <div class="ms-option active" data-market="global" onclick="setMarket('global')">
                             <span class="ms-option-flag">🌐</span> Global
                         </div>
-                        <div class="ms-option" onclick="setMarket('japan')">
+                        <div class="ms-option" data-market="japan" onclick="setMarket('japan')">
                             <span class="ms-option-flag">🇯🇵</span> 日本
                         </div>
-                        <div class="ms-option" onclick="setMarket('germany')">
+                        <div class="ms-option" data-market="germany" onclick="setMarket('germany')">
                             <span class="ms-option-flag">🇩🇪</span> Deutschland
                         </div>
-                        <div class="ms-option" onclick="setMarket('mexico')">
+                        <div class="ms-option" data-market="mexico" onclick="setMarket('mexico')">
                             <span class="ms-option-flag">🇲🇽</span> México
                         </div>
                     </div>
@@ -105,8 +105,8 @@
     <section id="problem">
         <div class="container">
             <p class="section-label">The Reality</p>
-            <h2>The real competitor<br>isn't another tool.<br>It's <span class="accent-text">doing nothing.</span></h2>
-            <p class="section-sub">Most products skip global markets—not because builders don't care, but because localization has always meant building a second product. We remove that friction entirely.</p>
+            <h2 data-vb="pain-h2">The real competitor<br>isn't another tool.<br>It's <span class="accent-text">doing nothing.</span></h2>
+            <p class="section-sub" data-vb="pain-sub">Most products skip global markets—not because builders don't care, but because localization has always meant building a second product. We remove that friction entirely.</p>
 
             <div class="pain-grid">
                 <div class="pain-card">
@@ -138,7 +138,7 @@
             <div class="approach-grid">
                 <div class="approach-content">
                     <p class="section-label">The Approach</p>
-                    <h2>A runtime,<br>not a workflow.</h2>
+                    <h2 data-vb="approach-h2">A runtime,<br>not a workflow.</h2>
                     <p>Traditional localization tools give you a dashboard to manage strings. Verbuise gives you a runtime that adapts your product automatically—based on who's using it and where they are.</p>
                     <p>One API call. Every market. Zero rebuilding.</p>
                     <a href="https://developer.verbuise.com/" class="btn btn-ghost" style="margin-top: 20px;">Read the docs &rarr;</a>
@@ -368,7 +368,7 @@
     <section id="how">
         <div class="container">
             <p class="section-label">How It Works</p>
-            <h2>Three steps to everywhere.</h2>
+            <h2 data-vb="steps-h2">Three steps to everywhere.</h2>
 
             <div class="steps-grid">
                 <div class="step">
@@ -397,8 +397,8 @@
     ═══════════════════════ -->
     <section id="cta">
         <div class="container">
-            <blockquote>"My app just<br>works in Tokyo."</blockquote>
-            <p class="cta-attribution">That's the goal. Let's make it happen.</p>
+            <blockquote data-vb="cta-quote">"My app just<br>works in Tokyo."</blockquote>
+            <p class="cta-attribution" data-vb="cta-attr">That's the goal. Let's make it happen.</p>
             <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" style="font-size: 15px; padding: 15px 32px;">Start adapting free</a>
             <p class="cta-note">No credit card required &middot; Free tier available &middot; Live in minutes</p>
         </div>
