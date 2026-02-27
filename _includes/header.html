@@ -1,80 +1,107 @@
-<nav>
-    <div>
-        <a class="logo" href="/">
-            <img src="/assets/logo/1.svg" alt="Verbuise">
-            <h1>Verbuise</h1>
-        </a>
+<header>
+    <nav class="nav-bar">
+        <div class="nav-inner">
+            <a class="logo" href="/">
+                <img src="/assets/logo/1.svg" alt="Verbuise">
+                <strong>Verbuise</strong>
+            </a>
 
-        <span class="three_lines">
-            <button class="button-link"
-                onclick="document.getElementById('nav_interactive').style.display = 'flex'; document.body.style.overflow = 'hidden'">
-                <span class="toggle_bar"></span>
-                <span class="toggle_bar"></span>
-                <span class="toggle_bar"></span>
-            </button>
-        </span>
-
-        <span class="nav_interactive" id="nav_interactive">
-            <span class="three_lines_popup">
-                <button class="button-link"
-                    onclick="document.getElementById('nav_interactive').style.display = 'none'; document.body.style.overflow = 'inherit'">
-                    ✕
-                </button>
-            </span>
-
-            <div class="dropdown">
-                <a class="dropdown_link navigation" href="/pricing">Pricing</a>
-                <a class="dropdown_small navigation" href="/pricing">Pricing</a>
-            </div>
-
-            <div class="dropdown">
-                <a class="dropdown_link navigation" href="/blog">Blog</a>
-                <a class="dropdown_small navigation" href="/blog">Blog</a>
-            </div>
-
-            <div class="dropdown">
-                <a class="navigation dropdown_click" href="javascript:dropdown('orgDropdown')">
-                    Product <span class="up">⌄</span>
-                </a>
-                <a class="navigation dropdown_small" href="/features">Product</a>
-                <div class="mobile-subnav">
-                    <a class="mobile-sublink" href="/features#ai">Language adaptation</a>
-                    <a class="mobile-sublink" href="/features#image">Image localization</a>
-                    <a class="mobile-sublink" href="/features#financial">Currency conversion</a>
-                    <a class="mobile-sublink" href="/features">All features →</a>
-                </div>
-                <div id="orgDropdown" class="dropdown-content right">
-                    <a href="/features#ai">Language adaptation</a>
-                    <a href="/features#image">Image localization</a>
-                    <a href="/features#financial">Currency conversion</a>
-                    <a href="/features">All features</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a class="navigation dropdown_click" href="javascript:dropdown('alertDropdown')">
-                    Developers <span class="up">⌄</span>
-                </a>
-                <a class="navigation dropdown_small" href="https://developer.verbuise.com/">Developers</a>
-                <div class="mobile-subnav">
-                    <a class="mobile-sublink" href="https://developer.verbuise.com/">Developer site</a>
-                    <a class="mobile-sublink" href="https://developer.verbuise.com/ref/api">API reference</a>
-                    <a class="mobile-sublink" href="https://developer.verbuise.com/ref/sdk/swift">Swift SDK</a>
-                    <a class="mobile-sublink" href="https://developer.verbuise.com/ref/sdk/web">Web SDK</a>
-                    <a class="mobile-sublink" href="https://developer.verbuise.com/ref/sdk">Other SDKs →</a>
-                </div>
-                <div id="alertDropdown" class="dropdown-content right">
-                    <a href="https://developer.verbuise.com/">Developer site</a>
-                    <a href="https://developer.verbuise.com/ref/api">API reference</a>
-                    <hr>
-                    <a href="https://developer.verbuise.com/ref/sdk/swift">Swift SDK</a>
-                    <a href="https://developer.verbuise.com/ref/sdk/web">Web SDK</a>
-                    <a href="https://developer.verbuise.com/ref/sdk">Other SDKs</a>
-                </div>
-            </div>
+            <ul class="nav-links">
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li class="nav-has-drop">
+                    <button class="nav-drop-trigger">Product <span class="nav-chevron">▾</span></button>
+                    <div class="nav-drop-menu">
+                        <a href="/features#ai">Language adaptation</a>
+                        <a href="/features#image">Image localization</a>
+                        <a href="/features#financial">Currency conversion</a>
+                        <a href="/features">All features</a>
+                    </div>
+                </li>
+                <li class="nav-has-drop">
+                    <button class="nav-drop-trigger">Developers <span class="nav-chevron">▾</span></button>
+                    <div class="nav-drop-menu">
+                        <a href="https://developer.verbuise.com/">Developer site</a>
+                        <a href="https://developer.verbuise.com/ref/api">API reference</a>
+                        <hr>
+                        <a href="https://developer.verbuise.com/ref/sdk/swift">Swift SDK</a>
+                        <a href="https://developer.verbuise.com/ref/sdk/web">Web SDK</a>
+                        <a href="https://developer.verbuise.com/ref/sdk">Other SDKs</a>
+                    </div>
+                </li>
+            </ul>
 
             <a href="https://app.verbuise.com/?onboard=true&trial=true" class="nav-cta">Start adapting</a>
-        </span>
+
+            <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-mobile-overlay" id="navOverlay">
+        <div class="nav-mobile-inner">
+            <div class="nav-mobile-top">
+                <a class="logo" href="/">
+                    <img src="/assets/logo/1.svg" alt="Verbuise">
+                    <strong>Verbuise</strong>
+                </a>
+                <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+            </div>
+            <div class="nav-mobile-links">
+                <a href="/pricing" class="mob-link">Pricing</a>
+                <a href="/blog" class="mob-link">Blog</a>
+                <p class="mob-section">Product</p>
+                <a href="/features#ai" class="mob-sublink">Language adaptation</a>
+                <a href="/features#image" class="mob-sublink">Image localization</a>
+                <a href="/features#financial" class="mob-sublink">Currency conversion</a>
+                <a href="/features" class="mob-sublink">All features →</a>
+                <p class="mob-section">Developers</p>
+                <a href="https://developer.verbuise.com/" class="mob-sublink">Developer site</a>
+                <a href="https://developer.verbuise.com/ref/api" class="mob-sublink">API reference</a>
+                <a href="https://developer.verbuise.com/ref/sdk/swift" class="mob-sublink">Swift SDK</a>
+                <a href="https://developer.verbuise.com/ref/sdk/web" class="mob-sublink">Web SDK</a>
+                <a href="https://developer.verbuise.com/ref/sdk" class="mob-sublink">Other SDKs →</a>
+                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="mob-cta">Start adapting</a>
+            </div>
+        </div>
     </div>
-</nav>
-<script src="/assets/js/nav.js"></script>
+</header>
+
+<script>
+(function () {
+    var hamburger = document.getElementById('navHamburger');
+    var overlay   = document.getElementById('navOverlay');
+    var closeBtn  = document.getElementById('navClose');
+
+    if (hamburger && overlay && closeBtn) {
+        hamburger.addEventListener('click', function () {
+            overlay.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        });
+        closeBtn.addEventListener('click', function () {
+            overlay.classList.remove('is-open');
+            document.body.style.overflow = '';
+        });
+    }
+
+    // Desktop dropdowns
+    document.querySelectorAll('.nav-drop-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var menu   = btn.nextElementSibling;
+            var isOpen = menu.classList.contains('is-open');
+            document.querySelectorAll('.nav-drop-menu').forEach(function (m) {
+                m.classList.remove('is-open');
+            });
+            if (!isOpen) menu.classList.add('is-open');
+        });
+    });
+
+    document.addEventListener('click', function () {
+        document.querySelectorAll('.nav-drop-menu').forEach(function (m) {
+            m.classList.remove('is-open');
+        });
+    });
+}());
+</script>
