@@ -1,37 +1,42 @@
 ---
-layout: post
-post: false
-title: "About Verbuise - Leading the Future of AI-Powered Localization"
+layout: page
+title: "About"
+section_label: "Our Story"
+lead: "Built by a solo developer. Designed for builders like us."
 permalink: /about
-description: "Learn more about Verbuise, the AI-driven platform that simplifies localization for websites, apps, and products. Join us in shaping the future of global business."
+description: "Learn about Verbuise — the globalization runtime that makes products feel native everywhere, without the workflow overhead."
 ---
 
-# Meet Verbuise - Your Partner in Global Expansion
+## Why we exist
 
-At Verbuise, we believe in breaking down barriers and building bridges—across languages, cultures, and markets. Founded on the principles of innovation and accessibility, our AI-powered localization platform is designed to help businesses seamlessly expand their global reach.
+Most products ship in one market and never leave it. Not because the builder doesn't want global users — but because going global has always meant building a second product. Different codebases, separate content pipelines, localization dashboards, and months of overhead before a single user in another country feels at home.
 
-## Our Mission
+Verbuise exists to eliminate that friction. We're building the globalization runtime — the adaptive layer that makes your product feel native everywhere, automatically, without rebuilding anything.
 
-Our mission at Verbuise is simple: to empower businesses of all sizes to communicate with their global audience as effectively as they do at home. We achieve this by providing cutting-edge tools that make localization straightforward, efficient, and accessible to everyone, regardless of their technical expertise. Inspired by a love for travel and a deep appreciation for diverse cultures, Verbuise was created to address the real challenges of localization. With many friends from different nationalities who struggled with English, it became clear that effective localization should be easier and more accessible.
+## How it started
 
-## Why Verbuise?
+Verbuise was built by a solo developer, still in high school at the time. The observation was simple: too many people couldn't use products they would have loved because those products only spoke one language, showed one currency, and assumed one culture.
 
-Verbuise aims to make a significant difference for businesses by not only increasing revenue and customer retention but also enhancing the overall user experience. Our platform is designed to ensure that every interaction feels seamless and intuitive, no matter where your audience is located. By offering an AI-powered solution that adapts to the unique needs of each business, Verbuise helps you connect with your global audience in a way that feels natural and effortless.
+Building Verbuise meant balancing real constraints — a full schedule including over 600 hours a year of community volunteering, college classes, and part-time work. None of that made the project smaller. It just made every decision count.
 
-At the core of our platform, Verbuise leverages top AI technologies, including Anthropic, OpenAI, and Google Gemini. We utilize these powerful tools in tandem to ensure the highest level of accuracy in our translations. By cycling translations back and forth between the original and target languages, we can verify and refine the content until it meets our rigorous standards. This unique approach guarantees that your message is not only translated correctly but also resonates with your audience in a meaningful way.
+The moment when friends from different countries tested the first version and it worked — when their language came back correctly, when the currency matched where they were — that was the moment Verbuise became something real.
 
-## Our Story
+## What we're building
 
-Verbuise was born out of a desire to make global communication easier and more accessible, but the journey to creating the platform was not without its challenges. Building Verbuise as a solo developer was a monumental task, made even more difficult by the fact that I was still in high school at the time. Balancing the demands of developing a large-scale project with a full plate of responsibilities—volunteering 600 hours per year at my church, taking college classes, and working as much as possible each week—was a true test of dedication and perseverance.
+Verbuise is a globalization runtime, not a translation tool. The difference matters.
 
-The moment I saw those first messages get translated correctly and verified by friends was a truly rewarding experience. It was a clear indication that all the hard work was beginning to pay off. Another pivotal moment in Verbuise's journey was getting the company incorporated and seeing the website launch for the first time. These milestones marked the transition of Verbuise from a small project into a comprehensive platform ready to support businesses in their global expansion efforts.
+Translation tools give you a dashboard to manage strings. Verbuise gives you a runtime that adapts your product automatically — language, currency, images, tone, and offers — based on who's using it and where they are.
 
-## Our Vision
+We use Anthropic, OpenAI, and Google Gemini in tandem, cycling translations through multiple models to verify accuracy before anything reaches a user. The result is adaptation that feels native, not mechanical.
 
-At Verbuise, we envision a future where language and cultural differences are no longer barriers to communication. Our long-term goal is to grow Verbuise into a platform that is reasonably priced and accessible for businesses of every size, from startups to large enterprises. We aim to continuously expand our features, implementing as many content localization and management tools as possible to simplify every aspect of global communication.
+## Who this is for
 
-Looking ahead, we’re excited about the possibility of enabling businesses to manage different social channels under various languages, making it easier than ever to maintain a consistent and effective global presence. As we continue to innovate and expand, our goal remains to make localization as intuitive and seamless as possible, empowering businesses to connect with their audiences wherever they are in the world.
+We build Verbuise for the same people who built their products the way we built ours: indie SaaS founders, mobile developers, AI product builders, and fast-moving startup teams who want global reach without global complexity.
 
-## Meet the Founder
+Not localization managers. Builders.
 
-Behind Verbuise is a dedicated solo developer with a passion for making global communication more accessible. While the journey has been challenging, it has also been incredibly rewarding to see Verbuise grow from an idea into a comprehensive platform. Although I’ve worked independently to bring Verbuise to life, the support and feedback from friends and early users have been invaluable in shaping the platform into what it is today.
+## The vision
+
+A future where language and cultural differences are never the reason a product doesn't reach the people it was built for.
+
+That's the goal. Everything else is a step toward it.

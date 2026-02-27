@@ -1,175 +1,92 @@
+/* post.css — blog post & inner page prose typography */
+
 #post {
-    font-family: 'Georgia', serif;
-    /* A classic serif font for readability */
-    line-height: 1.6;
-    /* Improved line height for better readability */
-    color: #333;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  color: #444;
+  line-height: 1.8;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
 }
 
-/* Container for the post content */
-#post {
-    padding: 6vw;
-    max-width: 900px;
-    margin: 0 auto;
+#post h1, #post h2, #post h3, #post h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  line-height: 1.15;
 }
 
-/* Heading styles for hierarchy and readability */
-#post h1,
-#post h2,
-#post h3,
-#post h4,
-#post h5,
-#post h6 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Sans-serif font for headings */
-    color: #222;
-    /* Slightly darker grey for headings */
-    margin-top: 1.5em;
-    /* Space above headings */
-    margin-bottom: 0.5em;
-    /* Space below headings */
+#post h2 { font-size: 21px; font-weight: 800; margin-top: 48px; margin-bottom: 10px; letter-spacing: -0.01em; }
+#post h3 { font-size: 16px; font-weight: 700; margin-top: 28px; margin-bottom: 6px; }
+#post h4 { font-size: 14px; font-weight: 700; margin-top: 20px; margin-bottom: 4px; }
+
+#post p  { font-size: 16px; line-height: 1.85; margin-bottom: 18px; color: #555; }
+
+#post ul, #post ol { padding-left: 20px; margin-bottom: 18px; }
+#post li { font-size: 15px; line-height: 1.75; color: #555; margin-bottom: 6px; }
+
+#post strong { color: #111; font-weight: 700; }
+
+#post a {
+  color: #0e8a5f;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-#post h1 {
-    font-size: 2em;
-}
+#post a:hover { color: #0b7a52; }
 
-#post h2 {
-    font-size: 1.75em;
-}
-
-#post h3 {
-    font-size: 1.5em;
-}
-
-#post h4 {
-    font-size: 1.25em;
-}
-
-#post h5 {
-    font-size: 1em;
-}
-
-#post h6 {
-    font-size: 0.875em;
-}
-
-/* Paragraph styles for readability */
-#post p {
-    margin-bottom: 1.5em;
-    /* Space between paragraphs */
-    font-size: 1.1em;
-    /* Slightly larger font size for paragraphs */
-    color: #444;
-    /* Lighter grey for paragraphs */
-}
-
-/* Blockquote styles for emphasis */
 #post blockquote {
-    font-style: italic;
-    /* Italicized text for quotes */
-    color: #666;
-    /* Lighter grey for quotes */
-    border-left: 5px solid #ccc;
-    /* Left border for visual distinction */
-    padding-left: 1em;
-    /* Space between border and text */
-    margin: 1.5em 0;
-    /* Space above and below blockquotes */
+  border-left: 3px solid #e5e5e5;
+  padding-left: 20px;
+  margin: 28px 0;
+  color: #888;
+  font-style: italic;
 }
 
-/* List styles for ordered and unordered lists */
-#post ul,
-#post ol {
-    margin: 1.5em 0;
-    /* Space above and below lists */
-    padding-left: 1.5em;
-    /* Indentation for list items */
-}
-
-#post ul li,
-#post ol li {
-    margin-bottom: 0.5em;
-    /* Space between list items */
-    line-height: 1.6;
-    /* Improved line height for list items */
-}
-
-/* Link styles for text links */
-#post a:not(.default) {
-    color: #007acc;
-    /* Blue color for links */
-    text-decoration: none;
-    /* Remove underline by default */
-    border-bottom: 1px dashed #007acc;
-    /* Dashed underline for visual cue */
-}
-
-#post a:not(.default):hover,
-#post a:not(.default):focus {
-    color: #005f99;
-    /* Darker blue on hover */
-    border-bottom: 1px solid #005f99;
-    /* Solid underline on hover */
-}
-
-/* Code and preformatted text styles */
 #post code {
-    font-family: 'Courier New', Courier, monospace;
-    /* Monospace font for code */
-    background-color: #f4f4f4;
-    /* Light grey background for code */
-    padding: 0.2em 0.4em;
-    /* Padding around inline code */
-    border-radius: 3px;
-    /* Rounded corners for inline code */
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 12.5px;
+  background: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 2px 6px;
 }
 
 #post pre {
-    background-color: #f4f4f4;
-    /* Light grey background for preformatted text */
-    padding: 1em;
-    /* Padding around preformatted text */
-    overflow-x: auto;
-    /* Horizontal scroll for long lines of code */
-    border-radius: 3px;
-    /* Rounded corners for preformatted text */
+  background: #18181b;
+  border-radius: 10px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 24px 0;
 }
 
 #post pre code {
-    background: none;
-    /* Remove background for code inside pre */
-    padding: 0;
-    /* Remove padding for code inside pre */
-}
-
-.breadcrumbs {
-    font-size: 0.875em;
-    margin: 1em 0;
-    padding: 0.5em 0;
-    border-radius: 5px;
-    padding-left: 1em;
-}
-
-.breadcrumbs a {
-    text-decoration: none;
-    color: #007acc;
-    margin-right: 0.5em;
-}
-
-.breadcrumbs a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumbs span {
-    color: #555;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #e2e8f0;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 #post img {
-    max-width: 80%;
-    display: block;
-    border: 2px solid black;
-    border-radius: 8px;
-    margin: auto;
-    max-height: 100%;
+  max-width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1.5px solid #efefef;
+  margin: 28px auto;
 }
+
+.breadcrumbs {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+  color: #888;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover { color: #111; }
+.breadcrumbs span { color: #aaa; }
