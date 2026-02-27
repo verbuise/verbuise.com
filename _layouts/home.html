@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
     {% include head.html %}
@@ -11,165 +14,370 @@
 
 <body>
     {% include header.html %}
-<div id="main">
 
-    <h1>Revolutionize Your Global Reach with AI-Powered Localization</h1>
-    <h2 class="caption">Manage translations, currency conversions, and images with ease.</h2>
-    <a class="primary" href="https://app.verbuise.com/?onboard=true&trial=true">Get Started for Free</a>
-    <a class="secondary">Watch Demo</a>
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-grid"></div>
+        </div>
 
-    <div id="features">
-        <div class="row">
-            <div class="column">
-                <div class="content">
-                    <div class="icon"><span>🌎</span></div>
-                    <h2>Instant Translations</h2>
-                    <p>Translate your website, app, or product content instantly into over 300 languages and 500
-                        regional
-                        dialects.</p>
+        <div class="container hero-inner">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Globalization Runtime
+            </div>
+
+            <h1>Your product should feel<br><span class="gradient-text">native everywhere.</span></h1>
+
+            <p class="hero-sub">Verbuise is the adaptive layer that automatically adjusts language, currency, images, and tone for each market—no workflow, no rebuilding, just behavior.</p>
+
+            <div class="hero-actions">
+                <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary">Start adapting free</a>
+                <a href="#how" class="btn btn-ghost">See how it works &rarr;</a>
+            </div>
+
+            <div class="market-cards">
+                <div class="market-card us">
+                    <div class="market-bar us-bar"></div>
+                    <span class="market-flag">🇺🇸</span>
+                    <div class="market-region">United States</div>
+                    <div class="market-cta">Get Started Free</div>
+                    <div class="market-price">$29<span>/mo</span></div>
+                </div>
+                <div class="market-card jp">
+                    <div class="market-bar jp-bar"></div>
+                    <span class="market-flag">🇯🇵</span>
+                    <div class="market-region">日本</div>
+                    <div class="market-cta">無料で始める</div>
+                    <div class="market-price">¥4,200<span>/月</span></div>
+                </div>
+                <div class="market-card de">
+                    <div class="market-bar de-bar"></div>
+                    <span class="market-flag">🇩🇪</span>
+                    <div class="market-region">Deutschland</div>
+                    <div class="market-cta">Kostenlos starten</div>
+                    <div class="market-price">€27<span>/Monat</span></div>
                 </div>
             </div>
-            <div class="column">
-                <img src="/assets/img_1.jpg">
-            </div>
+
+            <p class="hero-annotation">↑ Same product. One codebase. Every market.</p>
         </div>
+    </section>
 
-        <hr>
+    <div class="divider"></div>
 
-        <div class="row">
-            <div class="column">
-                <div class="content">
-                    <div class="icon"><span>🖼️</span></div>
-                    <h2>Localized Media</h2>
-                    <p>Change images and visuals based on the user's location to maximize engagement.</p>
+    <!-- ═══════════════════════════════════════
+         THE REAL COMPETITOR
+    ═══════════════════════════════════════ -->
+    <section id="problem">
+        <div class="container">
+            <span class="section-label">The Reality</span>
+            <h2>The real competitor isn't Phrase or Lokalise.<br><span class="gradient-text">It's doing nothing.</span></h2>
+            <p class="section-sub">Most products skip global markets—not because builders don't care, but because localization has always felt like building a second product. Verbuise removes that friction entirely.</p>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <span class="pain-icon">💀</span>
+                    <h3>Rebuilding from scratch</h3>
+                    <p>Traditional localization means separate builds, separate pipelines, and separate deployments per market. It's a second product every time.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">🐌</span>
+                    <h3>Months, not minutes</h3>
+                    <p>By the time a localized version ships, the product has already changed. You're always chasing a moving target on a lagging timeline.</p>
+                </div>
+                <div class="pain-card">
+                    <span class="pain-icon">💸</span>
+                    <h3>Leaving revenue behind</h3>
+                    <p>Products that feel foreign convert at a fraction of the rate. Every un-adapted market is revenue sitting on the table, untouched.</p>
                 </div>
             </div>
-            <div class="column">
-                <img src="/assets/img_2.jpg">
-            </div>
         </div>
+    </section>
 
-        <hr>
+    <div class="divider"></div>
 
-        <div class="row">
-            <div class="column">
-                <div class="content">
-                    <div class="icon"><span>💱</span></div>
-                    <h2>Currency Conversions</h2>
-                    <p>Automatically convert prices to your user's local currency out of 161 supported currencies
-                        for a
-                        seamless shopping
-                        experience. </p>
+    <!-- ═══════════════════════════════════════
+         THE APPROACH
+    ═══════════════════════════════════════ -->
+    <section id="approach">
+        <div class="container">
+            <div class="approach-grid">
+                <div class="approach-content">
+                    <span class="section-label">The Approach</span>
+                    <h2>A runtime,<br>not a <span class="gradient-text">workflow.</span></h2>
+                    <p>Traditional localization tools give you a dashboard to manage strings. Verbuise gives you a runtime that adapts your product automatically—based on who's using it and where they are.</p>
+                    <p>One API call. Every market. Zero rebuilding.</p>
+                    <a href="https://developer.verbuise.com/" class="btn btn-ghost" style="margin-top: 20px;">Read the docs &rarr;</a>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot r"></span>
+                        <span class="code-dot y"></span>
+                        <span class="code-dot g"></span>
+                        <span class="code-filename">adapt.js</span>
+                    </div>
+<code><span class="code-line"><span class="c-keyword">import</span> <span class="c-var">Verbuise</span> <span class="c-keyword">from</span> <span class="c-string">'@verbuise/sdk'</span></span>
+<span class="code-line"> </span>
+<span class="code-line"><span class="c-comment">// Initialize once</span></span>
+<span class="code-line"><span class="c-keyword">const</span> <span class="c-var">vb</span> = <span class="c-keyword">new</span> <span class="c-var">Verbuise</span>(<span class="c-string">'YOUR_PROJECT_ID'</span>)</span>
+<span class="code-line"> </span>
+<span class="code-line"><span class="c-comment">// Your product adapts automatically</span></span>
+<span class="code-line"><span class="c-keyword">const</span> <span class="c-var">experience</span> = <span class="c-keyword">await</span> <span class="c-var">vb</span>.<span class="c-fn">adapt</span>({</span>
+<span class="code-line">  <span class="c-var">user</span>: <span class="c-var">currentUser</span>,</span>
+<span class="code-line">  <span class="c-var">content</span>: <span class="c-var">yourContent</span>,</span>
+<span class="code-line">})</span>
+<span class="code-line"> </span>
+<span class="code-line"><span class="c-comment">// experience.language  → "ja"</span></span>
+<span class="code-line"><span class="c-comment">// experience.currency  → "¥4,200"</span></span>
+<span class="code-line"><span class="c-comment">// experience.image     → /assets/jp/hero.jpg</span></span>
+<span class="code-line"><span class="c-comment">// experience.tone      → "formal"</span></span>
+</code>
                 </div>
             </div>
-            <div class="column">
-                <img src="/assets/img_3.jpg">
-            </div>
         </div>
-    </div>
+    </section>
 
-    <br>
-    <ul>
-        {% assign post = site.posts | first %}
-        <h3>The latest from our blog.</h3>
-        <li class="post">
-            <a href="{{ post.url }}" class="link">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
-                <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
-            </a>
-        </li>
-    </ul>
+    <div class="divider"></div>
 
-    <div id="why">
-        <h1>Why choose Verbuise?</h1>
-        <div>
-            <div class="icon"><span>🧠</span></div>
-            <div class="detail">
-                <h3>VerbuiseAI</h3>
-                <p>VerbuiseAI offers advanced localization capabilities in over 300 languages and 500 dialects,
-                    ensuring your content resonates
-                    with global
-                    audiences by seamlessly adapting to diverse languages, dialects, and cultures.
-                </p>
+    <!-- ═══════════════════════════════════════
+         WHAT ADAPTS
+    ═══════════════════════════════════════ -->
+    <section id="adapts">
+        <div class="container">
+            <span class="section-label">Adaptive by Default</span>
+            <h2>One product. <span class="gradient-text">Every market.</span></h2>
+            <p class="section-sub">Not just translation. Full product adaptation—every layer of your user experience adjusts to match the market automatically.</p>
+
+            <div class="adapts-grid">
+                <div class="adapt-card">
+                    <span class="adapt-icon">🌐</span>
+                    <h3>Language</h3>
+                    <p>300+ languages, 500+ dialects. Context-aware, not word-for-word.</p>
+                </div>
+                <div class="adapt-card">
+                    <span class="adapt-icon">💱</span>
+                    <h3>Currency</h3>
+                    <p>161 currencies. Real-time rates. Localized formatting, automatically.</p>
+                </div>
+                <div class="adapt-card">
+                    <span class="adapt-icon">🖼️</span>
+                    <h3>Images</h3>
+                    <p>Different hero images per market. The right visual for the right audience.</p>
+                </div>
+                <div class="adapt-card">
+                    <span class="adapt-icon">🎭</span>
+                    <h3>Tone</h3>
+                    <p>Formal in Japan. Casual in Australia. Your product speaks the culture.</p>
+                </div>
+                <div class="adapt-card">
+                    <span class="adapt-icon">🎯</span>
+                    <h3>Offers</h3>
+                    <p>Different CTAs, pricing, and promotions per market. Always the right ask.</p>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="icon"><span>🔧</span></div>
-            <div class="detail">
-                <h3>Simple Integration</h3>
-                <p>Integrate Verbuise with your platform easily using our libraries, platform integrations, or API.
-                </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════
+         MARKET EXPERIENCES
+    ═══════════════════════════════════════ -->
+    <section id="experiences">
+        <div class="container">
+            <span class="section-label">Markets, Not Translations</span>
+            <h2>Define <span class="gradient-text">Experiences.</span><br>Not string files.</h2>
+            <p class="section-sub">Instead of managing translation keys, you define market experiences. Verbuise picks the right one for every user—automatically.</p>
+
+            <div class="experiences-grid">
+                <div class="experience-card us-exp">
+                    <div class="exp-header">
+                        <span class="exp-flag">🇺🇸</span>
+                        <div>
+                            <h3>US Experience</h3>
+                            <div class="exp-market-label">United States</div>
+                        </div>
+                    </div>
+                    <ul class="exp-items">
+                        <li class="exp-item">
+                            <span class="exp-item-label">Language</span>
+                            <span class="exp-item-value">English (US)</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">CTA</span>
+                            <span class="exp-item-value">"Get Started Free"</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Price</span>
+                            <span class="exp-item-value">$29/mo</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Tone</span>
+                            <span class="exp-item-value">Bold &amp; direct</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Image</span>
+                            <span class="exp-item-value">Dynamic, urban</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card jp-exp">
+                    <div class="exp-header">
+                        <span class="exp-flag">🇯🇵</span>
+                        <div>
+                            <h3>Japan Experience</h3>
+                            <div class="exp-market-label">日本</div>
+                        </div>
+                    </div>
+                    <ul class="exp-items">
+                        <li class="exp-item">
+                            <span class="exp-item-label">Language</span>
+                            <span class="exp-item-value">日本語</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">CTA</span>
+                            <span class="exp-item-value">"無料で始める"</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Price</span>
+                            <span class="exp-item-value">¥4,200/月</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Tone</span>
+                            <span class="exp-item-value">Polite &amp; precise</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Image</span>
+                            <span class="exp-item-value">Minimal, clean</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card de-exp">
+                    <div class="exp-header">
+                        <span class="exp-flag">🇩🇪</span>
+                        <div>
+                            <h3>Germany Experience</h3>
+                            <div class="exp-market-label">Deutschland</div>
+                        </div>
+                    </div>
+                    <ul class="exp-items">
+                        <li class="exp-item">
+                            <span class="exp-item-label">Language</span>
+                            <span class="exp-item-value">Deutsch</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">CTA</span>
+                            <span class="exp-item-value">"Kostenlos starten"</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Price</span>
+                            <span class="exp-item-value">€27/Monat</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Tone</span>
+                            <span class="exp-item-value">Professional, thorough</span>
+                        </li>
+                        <li class="exp-item">
+                            <span class="exp-item-label">Image</span>
+                            <span class="exp-item-value">Structured, precise</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="icon"><span>🔑</span></div>
-            <div class="detail">
-                <h3>User Authentication</h3>
-                <p>Secure, passwordless authentication with phone, email, or social logins.
-                </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════
+         FOR BUILDERS
+    ═══════════════════════════════════════ -->
+    <section id="builders">
+        <div class="container">
+            <span class="section-label">Built For</span>
+            <h2>For builders who ship fast<br>and <span class="gradient-text">think globally.</span></h2>
+            <p class="section-sub">Not for localization managers. For the people actually building the product—fast-moving teams who want global reach without global complexity.</p>
+
+            <div class="builders-grid">
+                <div class="builder-card">
+                    <span class="builder-icon">⚡</span>
+                    <h3>Indie SaaS</h3>
+                    <p>You built it solo. Now reach every market solo too—without hiring a localization team or redesigning anything.</p>
+                </div>
+                <div class="builder-card">
+                    <span class="builder-icon">📱</span>
+                    <h3>Mobile Apps</h3>
+                    <p>Ship once to the App Store and Play Store. Let Verbuise handle adaptation at runtime—per user, per region.</p>
+                </div>
+                <div class="builder-card">
+                    <span class="builder-icon">🤖</span>
+                    <h3>AI Products</h3>
+                    <p>Your model speaks English. Your users might not. Add a global adaptation layer without touching your core product.</p>
+                </div>
+                <div class="builder-card">
+                    <span class="builder-icon">🚀</span>
+                    <h3>Fast Startups</h3>
+                    <p>Go global on day one without slowing down. Adapt to new markets by defining an Experience, not a new codebase.</p>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="icon"><span>👥</span></div>
-            <div class="detail">
-                <h3>Team Collaboration</h3>
-                <p>Collaborate efficiently with team roles like creator, admin, developer, and translator.
-                </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════
+         HOW IT WORKS
+    ═══════════════════════════════════════ -->
+    <section id="how">
+        <div class="container">
+            <span class="section-label">How It Works</span>
+            <h2>Three steps to <span class="gradient-text">everywhere.</span></h2>
+
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number active">01</div>
+                    <h3>Integrate</h3>
+                    <p>Add the Verbuise SDK to your app. Web, iOS, Android—one integration, all platforms, minutes to live.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Define Markets</h3>
+                    <p>Set up your Experiences—what language, currency, images, and tone each market should see. No code changes needed.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Ship Everywhere</h3>
+                    <p>Deploy once. Verbuise handles the rest—automatically selecting the right Experience for every user, everywhere.</p>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="icon"><span>📁</span></div>
-            <div class="detail">
-                <h3>Multi-Project Management</h3>
-                <p>Manage multiple projects and clients with unique API keys for each.
-                </p>
-            </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════
+         FINAL CTA
+    ═══════════════════════════════════════ -->
+    <section id="cta">
+        <div class="cta-glow"></div>
+        <div class="container" style="position: relative;">
+            <span class="section-label" style="justify-content: center;">"The Stripe for going global"</span>
+            <blockquote>"My app just<br>works in Tokyo."</blockquote>
+            <p class="cta-sub">That's the goal. Let's make it happen.</p>
+            <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" style="font-size: 16px; padding: 16px 36px;">Start adapting free</a>
+            <p class="cta-note">No credit card required &middot; Free tier available &middot; Live in minutes</p>
         </div>
-    </div>
+    </section>
 
     {% include footer.html %}
 
-    <div id="globe"></div>
-
-    <script src="//unpkg.com/globe.gl"></script>
-
-    <script type="module">
-        import * as THREE from '//unpkg.com/three/build/three.module.js';
-
-        const world = Globe({ animateIn: false, backgroundColor: 'transparent' })
-        (document.getElementById('globe'))
-        .backgroundColor('#0000ff00')
-        .globeImageUrl('/assets/globe/earth.jpg')
-        .bumpImageUrl('/assets/globe/earth-topology.png');
-
-        // Auto-rotate
-        world.controls().autoRotate = true;
-        world.controls().autoRotateSpeed = 0.35;
-
-        window.addEventListener('resize', (event) => {
-            world.width([event.target.innerWidth])
-            world.height([event.target.innerHeight])
-        });
-
-        // Add clouds sphere
-        const CLOUDS_IMG_URL = '/assets/globe/clouds.png'; // from https://github.com/turban/webgl-earth
-        const CLOUDS_ALT = 0.004;
-        const CLOUDS_ROTATION_SPEED = -0.006; // deg/frame
-
-        new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
-        const clouds = new THREE.Mesh(
-            new THREE.SphereGeometry(world.getGlobeRadius() * (1 + CLOUDS_ALT), 50, 50),
-            new THREE.MeshPhongMaterial({ map: cloudsTexture, transparent: true })
-        );
-        world.scene().add(clouds);
-
-        (function rotateClouds() {
-            clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
-            requestAnimationFrame(rotateClouds);
-        })();
-        });
-  </script>
-    </body>
-
+</body>
 </html>

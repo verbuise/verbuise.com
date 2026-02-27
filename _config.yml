@@ -1,10 +1,9 @@
 # Site settings
-title: "Verbuise: AI-Powered Localization Platform"
+title: "Verbuise: The Globalization Runtime"
 email: hello@verbuise.com
 description: >-
-  Verbuise is an AI-powered localization platform for websites, apps, and products.
-  Translate into 300+ languages, localize images by region, and convert currencies automatically.
-  Simple API integration. Start your free trial today.
+  Verbuise is the globalization runtime for modern products. Automatically adapt language,
+  currency, images, and tone for every market—no workflow, no rebuilding. The Stripe for going global.
 baseurl: ""
 url: "https://verbuise.com"
 twitter_username: verbuise
