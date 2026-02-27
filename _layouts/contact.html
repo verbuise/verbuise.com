@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
+    {% include head.html %}
+</head>
+<body>
+    {% include header.html %}
+
+    <div class="page-hero">
+        <div class="container">
+            <p class="section-label">Contact</p>
+            <h1>Let's talk.</h1>
+            <p>Questions about pricing, the product, or going global? We read every message.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-layout">
+
+            <!-- Sidebar -->
+            <div class="contact-sidebar">
+                <h2>Get in touch</h2>
+                <p>We typically respond within one business day. For urgent issues, email works faster than anything else.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Email</div>
+                    <div class="contact-detail-value">
+                        <a href="mailto:hello@verbuise.com">hello@verbuise.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Enterprise &amp; custom</div>
+                    <div class="contact-detail-value">
+                        <a href="mailto:dedicated@verbuise.com">dedicated@verbuise.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Open source &amp; students</div>
+                    <div class="contact-detail-value">
+                        <a href="mailto:foss@verbuise.com">foss@verbuise.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Twitter</div>
+                    <div class="contact-detail-value">
+                        <a href="https://twitter.com/verbuise">@verbuise</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Developer docs</div>
+                    <div class="contact-detail-value">
+                        <a href="https://developer.verbuise.com/">developer.verbuise.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form class="contact-form" action="https://formspree.io/f/hello" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="general">General inquiry</option>
+                        <option value="pricing">Pricing question</option>
+                        <option value="enterprise">Enterprise &amp; custom plans</option>
+                        <option value="technical">Technical support</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="foss">Open source / student access</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+
+        </div>
+    </div>
+
+    {% include footer.html %}
+</body>
+</html>

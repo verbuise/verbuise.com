@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
     {% include head.html %}
 </head>
-
 <body>
     {% include header.html %}
-    <div id="post">
-        {% if page.post != false %}
 
-        <br>
+    {% if page.post != false %}
 
-        <div class="breadcrumbs">
-            <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>/
-            <a href="{{ site.url }}{{ site.baseurl }}/blog/">Blog</a>/
-            <span>{{ page.title }}</span>
+    <div class="post-wrap">
+        <div class="post-header">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="sep">/</span>
+                <a href="/blog">Blog</a>
+                <span class="sep">/</span>
+                <span>{{ page.title }}</span>
+            </div>
+            <h1>{{ page.title }}</h1>
+            <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
         </div>
 
-        <br>
+        <div id="post" class="post-body">
+            {{ content }}
+        </div>
 
-        <h1 style="margin-top: -20px !important">{{ page.title }}</h1>
-        <br>
-        <p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
-        {% endif %}
-        {{ content }}
+        <div class="post-cta">
+            <h3>Start adapting your product globally.</h3>
+            <p>No workflow. No rebuilding. Just behavior.</p>
+            <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary">Start adapting free</a>
+        </div>
 
-        {% if page.post != false %}
-
-        <h2 id="start-your-free-trial">Start Your Free Trial</h2>
-        <p>Experience the power of Verbuise for yourself. Get started with a free trial today and see how easy it is to
-            reach a global audience.</p>
-        <p><a href="https://app.verbuise.com/trial" class="default primary">Start Your Free Trial</a>
-            <a href="/pricing" class="default secondary">View Pricing</a></p>
-
-        <br>
-
-        <ul class="posts">
-            <h3>Some other articles</h3>
-
-            {% assign random_posts = site.posts | sample: 2 %}
-            {% for post in random_posts %}
-            <li class="post post_small">
-                <a href="{{ post.url }}" class="link">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                    <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-
+        {% assign other_posts = site.posts | where_exp: "p", "p.url != page.url" | sample: 2 %}
+        {% if other_posts.size > 0 %}
+        <div class="related-posts">
+            <h4>More from the blog</h4>
+            <ul class="blog-list" style="margin: 0;">
+                {% for p in other_posts %}
+                <li>
+                    <a href="{{ p.url }}">
+                        <h2>{{ p.title }}</h2>
+                        <p>{{ p.excerpt | strip_html | truncate: 120 }}</p>
+                        <span class="blog-date">{{ p.date | date: "%B %d, %Y" }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
         {% endif %}
     </div>
+
+    {% else %}
+
+    <div class="page-hero">
+        <div class="container">
+            {% if page.section_label %}
+            <p class="section-label">{{ page.section_label }}</p>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            {% if page.lead %}<p>{{ page.lead }}</p>{% endif %}
+        </div>
+    </div>
+
+    <div style="padding: 64px 0 100px;">
+        <div class="container prose">
+            {{ content }}
+        </div>
+    </div>
+
+    {% endif %}
+
     {% include footer.html %}
 </body>
-
 </html>

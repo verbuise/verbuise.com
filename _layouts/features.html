@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
+    {% include head.html %}
+</head>
+<body>
+    {% include header.html %}
+
+    <div class="page-hero">
+        <div class="container">
+            <p class="section-label">Features</p>
+            <h1>Everything that adapts.<br>Nothing that gets in the way.</h1>
+            <p>Verbuise handles the full surface area of market adaptation—language, currency, images, tone, and offers—automatically, at runtime.</p>
+        </div>
+    </div>
+
+    <!-- ADAPTATION PILLARS -->
+    <section class="features-section">
+        <div class="container">
+            <p class="section-label">Adaptation Pillars</p>
+            <h2>What Verbuise adapts for every user</h2>
+            <p>Not just translation. Every layer of your product experience adjusts to match the market—automatically.</p>
+            <div class="features-grid">
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🌐</span>
+                    <h3>Language</h3>
+                    <p>300+ languages, 500+ dialects. Context-aware rendering — idioms, formality, and script direction handled automatically.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">💱</span>
+                    <h3>Currency</h3>
+                    <p>161 currencies with real-time exchange rates. Localized formatting (symbol position, decimal separators) per locale.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🖼️</span>
+                    <h3>Images</h3>
+                    <p>Serve different hero images, product shots, and visuals per market. The right cultural context, automatically selected.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🎭</span>
+                    <h3>Tone</h3>
+                    <p>Formal in Japan. Direct in the US. Warm in Mexico. Your product voice shifts to match the culture without rewriting copy.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🎯</span>
+                    <h3>Offers &amp; CTAs</h3>
+                    <p>Different calls-to-action, pricing displays, and promotional copy per market. Always the right ask, in the right language.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">⚡</span>
+                    <h3>Runtime speed</h3>
+                    <p>Adaptation happens at the edge, not at build time. Zero extra latency. Your users never notice—they just feel at home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- MARKET EXPERIENCES -->
+    <section class="features-section">
+        <div class="container">
+            <p class="section-label">Market Experiences</p>
+            <h2>Define markets, not string files</h2>
+            <p>Instead of managing thousands of translation keys, you define Experiences—what each market should see, feel, and be offered. Verbuise picks the right one for every user automatically.</p>
+
+            <div class="feature-detail">
+                <div class="feature-detail-content">
+                    <h3>One product. Many experiences.</h3>
+                    <p>An Experience is a market profile: the language, currency, image set, tone, and offer strategy for a specific region. Set it once, and Verbuise applies it to every user in that market.</p>
+                    <p>You can define as many Experiences as you need — country-level, language-level, or even device-level.</p>
+                    <ul class="feature-detail-list">
+                        <li>US Experience — English, USD, bold CTAs</li>
+                        <li>Japan Experience — 日本語, ¥ pricing, formal tone</li>
+                        <li>Germany Experience — Deutsch, EUR, structured copy</li>
+                        <li>Add new markets in minutes, not weeks</li>
+                    </ul>
+                </div>
+                <div class="feature-detail-content">
+                    <h3>Automatic selection</h3>
+                    <p>Verbuise detects the user's locale from browser settings, IP, or your own user data. It then selects the matching Experience and adapts the content response automatically.</p>
+                    <p>No conditional code in your app. No per-locale builds. Just one API call.</p>
+                    <ul class="feature-detail-list">
+                        <li>Browser locale detection</li>
+                        <li>IP-based region inference</li>
+                        <li>Override via user preference</li>
+                        <li>Fallback chains (e.g. pt-BR → pt → en)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SDK & INTEGRATION -->
+    <section class="features-section">
+        <div class="container">
+            <p class="section-label">Integration</p>
+            <h2>One integration. Every platform.</h2>
+            <p>Add Verbuise to any product in minutes. We support every major platform and language, with SDKs designed to get out of your way.</p>
+            <div class="features-grid">
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🍎</span>
+                    <h3>Swift SDK</h3>
+                    <p>Native Swift package. Add to iOS or macOS apps with SPM. Async/await native, zero UIKit dependencies.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🌍</span>
+                    <h3>Web SDK</h3>
+                    <p>Lightweight JavaScript SDK. Works with React, Vue, plain HTML — any web stack, no bundler required.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🔌</span>
+                    <h3>REST API</h3>
+                    <p>Language-agnostic HTTP API. Integrate from any backend, serverless function, or platform we don't have an SDK for yet.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🛒</span>
+                    <h3>Shopify</h3>
+                    <p>One-click Shopify integration. Product descriptions, prices, and checkout copy adapt per market automatically.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">📝</span>
+                    <h3>WordPress</h3>
+                    <p>Plugin-based WordPress integration. Adapts posts, pages, and WooCommerce storefronts without touching your theme.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🤖</span>
+                    <h3>AI-powered</h3>
+                    <p>VerbuiseAI cycles translations through Anthropic, OpenAI, and Google Gemini models for accuracy verification at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ANALYTICS & SECURITY -->
+    <section class="features-section">
+        <div class="container">
+            <p class="section-label">Visibility &amp; Trust</p>
+            <h2>See what's working. Stay secure.</h2>
+            <p>Market adaptation is only valuable if you can measure it and trust it with your users' data.</p>
+            <div class="features-grid">
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">📊</span>
+                    <h3>Market analytics</h3>
+                    <p>See which Experiences are serving which users, engagement rates per market, and adaptation coverage across your content.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🔒</span>
+                    <h3>Data security</h3>
+                    <p>All content encrypted in transit and at rest. Access controls, audit logs, and compliance with GDPR and international data laws.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="feature-tile-icon">🔄</span>
+                    <h3>Automated sync</h3>
+                    <p>Change your source content once. All Experiences update automatically — no manual re-export or re-translation step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" style="border-top: 1px solid #efefef;">
+        <div class="container" style="text-align: center;">
+            <p class="section-label" style="justify-content: center;">Get started</p>
+            <blockquote style="font-size: clamp(28px, 4vw, 52px);">Your product. Every market.<br>Starting today.</blockquote>
+            <p class="cta-attribution">Free tier available. Live in minutes.</p>
+            <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" style="font-size: 15px; padding: 14px 32px;">Start adapting free</a>
+        </div>
+    </section>
+
+    {% include footer.html %}
+</body>
+</html>

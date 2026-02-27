@@ -1,21 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nav.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/pricing.css' | relative_url }}">
     {% include head.html %}
 </head>
-
 <body>
     {% include header.html %}
-    <div id="main">
-        {{ content }}
-        {% include footer.html %}
-    </div>
-</body>
 
+    <div class="page-hero">
+        <div class="container">
+            <p class="section-label">Pricing</p>
+            <h1>Simple, honest pricing.</h1>
+            <p>Start for free. Scale when you're ready. No surprise charges, no per-seat traps.</p>
+        </div>
+    </div>
+
+    <div style="padding: 0 0 100px;">
+        <div class="container">
+
+            <div class="pricing-grid">
+
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-plan">Starter</div>
+                    <div class="pricing-price">
+                        <strong>$7</strong><span>/month</span>
+                    </div>
+                    <p class="pricing-desc">For indie builders testing a global market. Get the runtime running in an afternoon.</p>
+                    <div class="pricing-sep"></div>
+                    <ul class="pricing-features">
+                        <li>2 team seats</li>
+                        <li>1 product</li>
+                        <li>Up to 3 market Experiences</li>
+                        <li>1,000 content entries</li>
+                        <li>Language, currency &amp; image adaptation</li>
+                        <li>API &amp; Web SDK</li>
+                        <li>Shopify &amp; WordPress integrations</li>
+                    </ul>
+                    <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-ghost" style="width: 100%; justify-content: center;">Get started free</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card featured">
+                    <div class="pricing-card-badge">Most popular</div>
+                    <div class="pricing-plan">Pro</div>
+                    <div class="pricing-price">
+                        <strong>$120</strong><span>/month</span>
+                    </div>
+                    <p class="pricing-desc">For growing teams shipping products across multiple markets at speed.</p>
+                    <div class="pricing-sep"></div>
+                    <ul class="pricing-features">
+                        <li>50 team seats</li>
+                        <li>20 products</li>
+                        <li>Unlimited market Experiences</li>
+                        <li>20,000 content entries</li>
+                        <li>Full suite — language, currency, images, tone &amp; offers</li>
+                        <li>All SDKs (Swift, Web, REST)</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="https://app.verbuise.com/?onboard=true&trial=true" class="btn btn-primary" style="width: 100%; justify-content: center;">Get started free</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-plan">Enterprise</div>
+                    <div class="pricing-price">
+                        <strong>$400</strong><span>/month</span>
+                    </div>
+                    <p class="pricing-desc">For large-scale deployments with high volume and custom market requirements.</p>
+                    <div class="pricing-sep"></div>
+                    <ul class="pricing-features">
+                        <li>200 team seats</li>
+                        <li>100 products</li>
+                        <li>Unlimited market Experiences</li>
+                        <li>100,000 content entries</li>
+                        <li>Full adaptation suite</li>
+                        <li>All SDKs + custom integrations</li>
+                        <li>SLA &amp; dedicated support</li>
+                        <li>Custom billing &amp; invoicing</li>
+                    </ul>
+                    <a href="mailto:hello@verbuise.com" class="btn btn-ghost" style="width: 100%; justify-content: center;">Contact us</a>
+                </div>
+
+            </div>
+
+            <div class="pricing-footer-note">
+                <div>
+                    <h4>Need more?</h4>
+                    <p>Higher limits, custom contracts, dedicated infrastructure — <a href="mailto:dedicated@verbuise.com">dedicated@verbuise.com</a></p>
+                </div>
+                <div>
+                    <h4>Students, teachers &amp; open source</h4>
+                    <p>Free access for educational and FOSS projects — <a href="mailto:foss@verbuise.com">foss@verbuise.com</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% include footer.html %}
+</body>
 </html>
